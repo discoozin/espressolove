@@ -92,7 +92,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_li8dt")
 movement_speed = 150.0
@@ -106,3 +106,4 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_sxyg3")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.233981
