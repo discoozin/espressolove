@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+"default_portrait": "david-padrao",
+"description": "",
+"display_name": "David",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(150, 0),
+"portraits": {
+"david-padrao": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david idle portraits colorido.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

@@ -47,6 +47,7 @@ size = Vector2(26, 18)
 
 [node name="gerente" type="CharacterBody2D"]
 script = ExtResource("1_oey1a")
+dialogo = "tutorial"
 
 [node name="animacao" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -4)

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cetfh10kdeq4k"]
+
+[ext_resource type="Texture2D" uid="uid://bqkabwrj5m027" path="res://Assets/Sprites/idle (frente) iris (sem cor) - sheet.png" id="1_eii32"]
+[ext_resource type="Script" path="res://Assets/Scripts/cliente_generico_1.gd" id="1_gi4w2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no6ko"]
+atlas = ExtResource("1_eii32")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ym41"]
+atlas = ExtResource("1_eii32")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y6sg"]
+atlas = ExtResource("1_eii32")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbdec"]
+atlas = ExtResource("1_eii32")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h70em"]
+atlas = ExtResource("1_eii32")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0v5bp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no6ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ym41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y6sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbdec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h70em")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqbtb"]
+size = Vector2(13, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hbio"]
+size = Vector2(25, 23)
+
+[node name="cliente_generico_1" type="CharacterBody2D"]
+script = ExtResource("1_gi4w2")
+dialogo = "pedido-tutorial"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0v5bp")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_eqbtb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="interativo2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6hbio")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

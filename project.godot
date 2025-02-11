@@ -21,9 +21,17 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"David": "res://Assets/Character/David.dch",
+"Evander": "res://Assets/Character/Evander.dch",
+"Iris": "res://Assets/Character/Iris.dch"
+}
 directories/dtl_directory={
-"timeline": "res://Assets/Timelines/timeline.dtl"
+"pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
+"tutorial": "res://Assets/Timelines/tutorial.dtl"
+}
+variables={
+"tutorial": 0.0
 }
 
 [editor_plugins]

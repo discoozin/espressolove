@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2rkfce0q70bh"]
+[gd_scene load_steps=4 format=3 uid="uid://b2rkfce0q70bh"]
 
 [ext_resource type="PackedScene" uid="uid://b8fosplnjvvb2" path="res://Assets/Scenes/player.tscn" id="1_5at1s"]
+[ext_resource type="PackedScene" uid="uid://dxe8d365hwk6o" path="res://Assets/Scenes/gerente.tscn" id="2_llwa5"]
+[ext_resource type="PackedScene" uid="uid://cetfh10kdeq4k" path="res://Assets/Scenes/cliente_generico_1.tscn" id="3_rywk3"]
 
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_5at1s")]
+position = Vector2(154, 134)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(4, 4)
+
+[node name="gerente" parent="." instance=ExtResource("2_llwa5")]
+position = Vector2(264, 114)
+
+[node name="cliente_generico_1" parent="." instance=ExtResource("3_rywk3")]
+position = Vector2(226, 204)

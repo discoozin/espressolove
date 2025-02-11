@@ -1,0 +1,13 @@
+# Essa variavel diz as etapas do tutorial
+if {tutorial} == 0:
+	join Evander left
+	join David right
+	Evander: Bom dia.
+	leave --All--
+	set {tutorial} = 1
+	# vai levar para outro dialogo
+	# continuação do pedido no "pedido-tutorial"
+elif {tutorial} == 2:
+	join Evander center
+	Evander: OPA
+	leave Evander
