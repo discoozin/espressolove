@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c43ip8w2o0ee3"
-path="res://.godot/imported/idle (frente) evander (sem cor) - sheet.png-7469877541008de3b146228ec3afc789.ctex"
+uid="uid://cikc833c87d8n"
+path="res://.godot/imported/DAVID (IDLE) - frente.png-c8a673f1bf40c3f7804ff7fbb04f4ccd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/idle (frente) evander (sem cor) - sheet.png"
-dest_files=["res://.godot/imported/idle (frente) evander (sem cor) - sheet.png-7469877541008de3b146228ec3afc789.ctex"]
+source_file="res://Assets/Sprites/david/walk/DAVID (IDLE) - frente.png"
+dest_files=["res://.godot/imported/DAVID (IDLE) - frente.png-c8a673f1bf40c3f7804ff7fbb04f4ccd.ctex"]
 
 [params]
 

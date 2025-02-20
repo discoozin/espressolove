@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brfae6r5b2dia"
-path="res://.godot/imported/gerente t-pose colorido.png-3366fe9ff969db492deaabb0d508c879.ctex"
+uid="uid://dmmqjbfs3qo36"
+path="res://.godot/imported/DAVID (IDLE) - frente.png-4adf1ab9cbb1f563ef948145e3f9f421.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/gerente t-pose colorido.png"
-dest_files=["res://.godot/imported/gerente t-pose colorido.png-3366fe9ff969db492deaabb0d508c879.ctex"]
+source_file="res://Assets/Sprites/david/DAVID (IDLE) - frente.png"
+dest_files=["res://.godot/imported/DAVID (IDLE) - frente.png-4adf1ab9cbb1f563ef948145e3f9f421.ctex"]
 
 [params]
 

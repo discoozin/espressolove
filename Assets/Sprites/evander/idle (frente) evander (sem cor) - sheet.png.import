@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b731soci1htu6"
-path="res://.godot/imported/iris idle portraits colorido.png-44578359e57797b50df7018234175da5.ctex"
+uid="uid://c43ip8w2o0ee3"
+path="res://.godot/imported/idle (frente) evander (sem cor) - sheet.png-6ca0db0a1c50e3db91bbf4c8286ed267.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/iris idle portraits colorido.png"
-dest_files=["res://.godot/imported/iris idle portraits colorido.png-44578359e57797b50df7018234175da5.ctex"]
+source_file="res://Assets/Sprites/evander/idle (frente) evander (sem cor) - sheet.png"
+dest_files=["res://.godot/imported/idle (frente) evander (sem cor) - sheet.png-6ca0db0a1c50e3db91bbf4c8286ed267.ctex"]
 
 [params]
 

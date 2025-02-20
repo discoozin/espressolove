@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cetfh10kdeq4k"]
 
-[ext_resource type="Texture2D" uid="uid://bqkabwrj5m027" path="res://Assets/Sprites/idle (frente) iris (sem cor) - sheet.png" id="1_eii32"]
+[ext_resource type="Texture2D" uid="uid://bqkabwrj5m027" path="res://Assets/Sprites/iris/idle (frente) iris (sem cor) - sheet.png" id="1_eii32"]
 [ext_resource type="Script" path="res://Assets/Scripts/cliente_generico_1.gd" id="1_gi4w2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_no6ko"]

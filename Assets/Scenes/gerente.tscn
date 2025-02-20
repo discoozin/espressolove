@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dxe8d365hwk6o"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/gerente.gd" id="1_oey1a"]
-[ext_resource type="Texture2D" uid="uid://c43ip8w2o0ee3" path="res://Assets/Sprites/idle (frente) evander (sem cor) - sheet.png" id="1_vg4tx"]
+[ext_resource type="Texture2D" uid="uid://c43ip8w2o0ee3" path="res://Assets/Sprites/evander/idle (frente) evander (sem cor) - sheet.png" id="1_vg4tx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1s3o"]
 atlas = ExtResource("1_vg4tx")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b8fosplnjvvb2"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/player_movement.gd" id="1_li8dt"]
-[ext_resource type="Texture2D" uid="uid://jj6inm0t05pc" path="res://Assets/Sprites/idle (frente) david (sem cor) - sheet.png" id="2_cpgba"]
+[ext_resource type="Texture2D" uid="uid://jj6inm0t05pc" path="res://Assets/Sprites/david/idle (frente) david (sem cor) - sheet.png" id="2_cpgba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2dbj"]
 size = Vector2(17, 22)

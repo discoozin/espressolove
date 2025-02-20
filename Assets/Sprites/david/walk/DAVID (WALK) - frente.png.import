@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jj6inm0t05pc"
-path="res://.godot/imported/idle (frente) david (sem cor) - sheet.png-147aa1f1b9176da04efde407ec8110e1.ctex"
+uid="uid://bpdd5qav6bfjv"
+path="res://.godot/imported/DAVID (WALK) - frente.png-ec7feaf6a0f39eb8b4b3878ae3a681be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/idle (frente) david (sem cor) - sheet.png"
-dest_files=["res://.godot/imported/idle (frente) david (sem cor) - sheet.png-147aa1f1b9176da04efde407ec8110e1.ctex"]
+source_file="res://Assets/Sprites/david/walk/DAVID (WALK) - frente.png"
+dest_files=["res://.godot/imported/DAVID (WALK) - frente.png-ec7feaf6a0f39eb8b4b3878ae3a681be.ctex"]
 
 [params]
 
