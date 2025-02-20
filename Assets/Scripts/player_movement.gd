@@ -13,8 +13,9 @@ func _physics_process(delta):
 	
 	if character_direction:
 		velocity = character_direction * movement_speed
-		#<adicionar sprite animation walking to idle 
+		#add animaçao andar sprite %sprite
 	else:	
 		velocity = velocity.move_toward(Vector2.ZERO, movement_speed)
+		#add animaçao andar sprite %sprite
 	
 	move_and_slide()
