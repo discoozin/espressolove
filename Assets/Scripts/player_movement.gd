@@ -8,9 +8,18 @@ func _physics_process(delta):
 	character_direction.y = Input.get_axis("move_up", "move_down")
 	
 	#flip
-	if character_direction.x > 0: %sprite.flip_h = false
-	#elif character_direction.x <0: %sprite.filp_h = true
-	
+	if Input.is_action_pressed("move_left"):
+		$sprite.play("side")
+		$sprite.flip_h=true
+	elif Input.is_action_pressed("move_right"):
+		$sprite.play("side")
+		$sprite.flip_h=false
+	elif Input.is_action_pressed("move_up"):
+		$sprite.play("up")
+	elif Input.is_action_pressed("move_down"):
+		$sprite.play("down")
+	else:
+		$sprite.play("idle")
 	if character_direction:
 		velocity = character_direction * movement_speed
 		#<adicionar sprite animation walking to idle 
