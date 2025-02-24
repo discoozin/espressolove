@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgdghhvi8777m"]
+
+[ext_resource type="Texture2D" uid="uid://03kgvm3wwwr8" path="res://Assets/Scenes/cenacafeblackwhite.png" id="1_ovhfk"]
+
+[node name="cafecena" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579, 324.5)
+scale = Vector2(2.40417, 1.80278)
+texture = ExtResource("1_ovhfk")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://baqoeulcx21kj"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/cafeteira.gd" id="1_sdlsl"]
+[ext_resource type="Texture2D" uid="uid://dba3srmdt6rp" path="res://Assets/Sprites/cafeteira/cafeteira.png" id="1_vhlkl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_awxe3"]
+radius = 12.0
+height = 24.0
+
+[node name="cafeteira" type="Area2D"]
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_sdlsl")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_vhlkl")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_awxe3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

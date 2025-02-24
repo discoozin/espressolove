@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://b8fosplnjvvb2"]
+[gd_scene load_steps=50 format=3 uid="uid://b8fosplnjvvb2"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/player_movement.gd" id="1_li8dt"]
 [ext_resource type="Texture2D" uid="uid://dmmqjbfs3qo36" path="res://Assets/Sprites/david/DAVID (IDLE) - frente.png" id="2_47pib"]
@@ -8,14 +8,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2dbj"]
 size = Vector2(17, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4emm"]
-atlas = ExtResource("2_65o36")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ml2ti"]
-atlas = ExtResource("2_65o36")
-region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xemwo"]
 atlas = ExtResource("2_65o36")
@@ -105,14 +97,6 @@ region = Rect2(320, 0, 32, 32)
 atlas = ExtResource("2_47pib")
 region = Rect2(352, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hhbmt"]
-atlas = ExtResource("3_n04c0")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ejgar"]
-atlas = ExtResource("3_n04c0")
-region = Rect2(32, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_faciw"]
 atlas = ExtResource("3_n04c0")
 region = Rect2(64, 0, 32, 32)
@@ -152,14 +136,6 @@ region = Rect2(320, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_23bsl"]
 atlas = ExtResource("3_n04c0")
 region = Rect2(352, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iu4sv"]
-atlas = ExtResource("4_85qqg")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7gdt"]
-atlas = ExtResource("4_85qqg")
-region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abpeq"]
 atlas = ExtResource("4_85qqg")
@@ -204,12 +180,6 @@ region = Rect2(352, 0, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_sxyg3"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s4emm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ml2ti")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xemwo")
 }, {
@@ -287,12 +257,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hhbmt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ejgar")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_faciw")
 }, {
 "duration": 1.0,
@@ -327,12 +291,6 @@ animations = [{
 "speed": 12.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iu4sv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d7gdt")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_abpeq")
 }, {
@@ -377,8 +335,8 @@ movement_speed = 125.0
 position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_r2dbj")
 
-[node name="sprite" type="AnimatedSprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="." groups=["player"]]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_sxyg3")
-animation = &"up"
+animation = &"idle"
 autoplay = "idle"

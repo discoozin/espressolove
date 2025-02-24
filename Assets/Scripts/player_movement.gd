@@ -19,10 +19,10 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("move_down"):
 		$sprite.play("down")
 	else:
-		$sprite.play("idle")
+		$sprite.stop()
 	if character_direction:
 		velocity = character_direction * movement_speed
-		#<adicionar sprite animation walking to idle 
+		
 	else:	
 		velocity = velocity.move_toward(Vector2.ZERO, movement_speed)
 	
