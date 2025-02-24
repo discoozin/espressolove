@@ -1,5 +1,6 @@
 # VAMOS UTILIZAR A IRIS NO TUTORIAL PROVISORIAMENTE, POR ISSO QUE OS DIALOGOS SEREM DE NPC GENERICO
 if {tutorial} == 1:
+	set {podeandar} = true
 	join David right
 	# APENAS COMENTANDO PRA NÃO SE PERDER, EU SEI QUE TU NÃO É BURRO E TU SABE Q ISSO É AS ESCOLHAS DO PRIMEIRO DIALOGO
 	- Bom dia, qual vai ser o pedido?
@@ -10,3 +11,4 @@ if {tutorial} == 1:
 		Iris: Bom dia, eu estou bem. Você é novo por aqui não é?
 	# VAI VOLTAR PRO DIALOGO COM O GERENTE
 	set {tutorial} = 2
+	set {podeandar} = false

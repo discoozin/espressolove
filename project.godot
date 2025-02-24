@@ -31,6 +31,7 @@ directories/dtl_directory={
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
 }
 variables={
+"podeandar": false,
 "tutorial": 0.0
 }
 glossary/default_case_sensitive=true

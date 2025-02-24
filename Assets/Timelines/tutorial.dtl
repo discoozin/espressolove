@@ -1,13 +1,17 @@
 # Essa variavel diz as etapas do tutorial
 if {tutorial} == 0:
+	set {podeandar} = true
 	join Evander left
 	join David right
 	Evander: Bom dia.
 	leave --All--
 	set {tutorial} = 1
+	set {podeandar} = false
 	# vai levar para outro dialogo
 	# continuação do pedido no "pedido-tutorial"
 elif {tutorial} == 2:
+	set {podeandar} = true
 	join Evander center
 	Evander: OPA
 	leave Evander
+	set {podeandar} = false
