@@ -2,13 +2,37 @@
 if {tutorial} == 1:
 	set {podeandar} = true
 	join David right
-	# APENAS COMENTANDO PRA NÃO SE PERDER, EU SEI QUE TU NÃO É BURRO E TU SABE Q ISSO É AS ESCOLHAS DO PRIMEIRO DIALOGO
+	# ESCOLHAS
 	- Bom dia, qual vai ser o pedido?
-		join Iris left
+		join Iris leftmost
 		Iris: Bom dia, Você é novo por aqui não é?
+		- Sim, hoje é meu primeiro dia. Qual vai ser seu pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
+		- Sim, ainda estou me acostumando ao novo emprego. Qual vai ser seu pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
+		- É, estou começando agora. Qual vai ser o pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
 	- Bom dia, como vai?
-		join Iris left
+		join Iris leftmost
 		Iris: Bom dia, eu estou bem. Você é novo por aqui não é?
+		- Sim, hoje é meu primeiro dia. Qual vai ser seu pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
+		- Sim, ainda estou me acostumando ao novo emprego. Qual vai ser seu pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
+		- É, estou começando agora. Qual vai ser o pedido?
+			Iris: Eu vou querer um Expresso Simples por favor
+			David: Só um momento, vou preparar seu pedido.
+			leave --All--
 	# VAI VOLTAR PRO DIALOGO COM O GERENTE
 	set {tutorial} = 2
 	set {podeandar} = false

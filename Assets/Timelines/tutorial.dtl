@@ -1,9 +1,10 @@
-# Essa variavel diz as etapas do tutorial
+# variavel "tutorial" vai setar em que parte do tutorial está.
 if {tutorial} == 0:
 	set {podeandar} = true
 	join Evander left
 	join David right
-	Evander: Bom dia.
+	Evander: Seja bem-vindo ao seu primeiro dia de trabalho aqui na cafeteria. Vamos começar o seu treinamento.
+	Evander: Primeiro, vamos anotar o pedido do cliente. Aperte a tecla E quando estiver perto do caixa.
 	leave --All--
 	set {tutorial} = 1
 	set {podeandar} = false

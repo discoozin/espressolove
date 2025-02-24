@@ -15,11 +15,11 @@
 "display_name": "Evander",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(-150, 100),
+"offset": Vector2(-150, 350),
 "portraits": {
 "evander-padrao": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/gerente t-pose colorido.png\""
+"image": "\"res://Assets/Sprites/evander/gerente t-pose colorido.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
