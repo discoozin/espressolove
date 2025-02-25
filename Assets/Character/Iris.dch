@@ -15,11 +15,11 @@
 "display_name": "Iris",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(100, 0),
+"offset": Vector2(0, 0),
 "portraits": {
 "iris padrao": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/iris/iris idle portraits colorido.png\""
+"image": "\"res://Assets/Sprites/iris idle portraits colorido.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -27,5 +27,5 @@
 "scene": ""
 }
 },
-"scale": 0.9
+"scale": 1.0
 }

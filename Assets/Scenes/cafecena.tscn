@@ -1,10 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgdghhvi8777m"]
+[gd_scene load_steps=6 format=3 uid="uid://dgdghhvi8777m"]
 
-[ext_resource type="Texture2D" uid="uid://03kgvm3wwwr8" path="res://Assets/Scenes/cenacafeblackwhite.png" id="1_ovhfk"]
+[ext_resource type="Script" path="res://Assets/Scripts/cenacafe.gd" id="1_m41h1"]
+[ext_resource type="Texture2D" uid="uid://0ts4bst1tlq1" path="res://Assets/Scenes/spritescenacafe/cenacafeblackwhite.png" id="2_lau1a"]
+[ext_resource type="PackedScene" uid="uid://b4le4ka4mds6v" path="res://Assets/Scenes/cafeteiragrande.tscn" id="3_gl5ms"]
+[ext_resource type="PackedScene" uid="uid://qy00xve8jsk0" path="res://Assets/Scenes/xicaracafe.tscn" id="4_b03wy"]
+[ext_resource type="Texture2D" uid="uid://banepd7pocr1p" path="res://Assets/Scenes/spritescenacafe/cafecenacafe.png" id="5_2ytxh"]
 
-[node name="cafecena" type="Node2D"]
+[node name="cenacafe" type="Node2D"]
+script = ExtResource("1_m41h1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(579, 324.5)
-scale = Vector2(2.40417, 1.80278)
-texture = ExtResource("1_ovhfk")
+position = Vector2(576.5, 326)
+scale = Vector2(2.39375, 1.78889)
+texture = ExtResource("2_lau1a")
+
+[node name="cafeteiragrande" parent="." instance=ExtResource("3_gl5ms")]
+position = Vector2(669, 336)
+scale = Vector2(0.9, 0.9)
+
+[node name="xicaracafe" parent="." instance=ExtResource("4_b03wy")]
+offset_left = 195.0
+offset_top = 483.0
+offset_right = 235.0
+offset_bottom = 523.0
+texture = ExtResource("5_2ytxh")
+
+[node name="xicaracafe2" parent="." instance=ExtResource("4_b03wy")]
+offset_left = 650.0
+offset_top = 396.0
+offset_right = 690.0
+offset_bottom = 436.0
