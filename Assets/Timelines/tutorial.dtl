@@ -3,7 +3,7 @@ if {tutorial} == 0:
 	set {podeandar} = true
 	join Evander left
 	join David right
-	Evander: Bom dia.
+	Evander: Seja bem-vindo ao seu primeiro dia de trabalho aqui na cafeteria. Vamos começar o seu treinamento.
 	leave --All--
 	set {tutorial} = 1
 	set {podeandar} = false
@@ -12,6 +12,7 @@ if {tutorial} == 0:
 elif {tutorial} == 2:
 	set {podeandar} = true
 	join Evander center
-	Evander: OPA
+	Evander: O Cliente está pedindo um "Expresso Simples" vou te mostrar como faz 
+	Evander: Interaja com a cafeteira apertando "E", pegue a xícara e coloque na cafeteira.
 	leave Evander
 	set {podeandar} = false
