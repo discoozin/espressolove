@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4le4ka4mds6v"]
 
-[ext_resource type="Texture2D" uid="uid://d23sm2uain3ck" path="res://Assets/Scenes/spritescenacafe/cafeteiragrande.png" id="1_p4gmg"]
+[ext_resource type="Texture2D" uid="uid://d23sm2uain3ck" path="res://Assets/Sprites/spritescenacafe/cafeteiragrande.png" id="1_p4gmg"]
 
 [node name="cafeteiragrande" type="Sprite2D"]
 texture = ExtResource("1_p4gmg")

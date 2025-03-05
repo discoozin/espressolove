@@ -149,7 +149,7 @@ tile_map_data = PackedByteArray("AAAQAAwAAAAAAAAAAAASAA4AAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_3ktwg")
 
 [node name="player" parent="." instance=ExtResource("1_5at1s")]
-position = Vector2(307, 158)
+position = Vector2(128, 238)
 collision_mask = 15
 
 [node name="Camera2D" type="Camera2D" parent="player"]

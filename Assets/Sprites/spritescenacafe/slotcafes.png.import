@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d23sm2uain3ck"
-path="res://.godot/imported/cafeteiragrande.png-368bb09b2abf422965ee05052770a759.ctex"
+uid="uid://dopp6w0w2pgpq"
+path="res://.godot/imported/slotcafes.png-d4f3aec74e8171d123c5730a7b1d6690.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scenes/spritescenacafe/cafeteiragrande.png"
-dest_files=["res://.godot/imported/cafeteiragrande.png-368bb09b2abf422965ee05052770a759.ctex"]
+source_file="res://Assets/Sprites/spritescenacafe/slotcafes.png"
+dest_files=["res://.godot/imported/slotcafes.png-d4f3aec74e8171d123c5730a7b1d6690.ctex"]
 
 [params]
 
