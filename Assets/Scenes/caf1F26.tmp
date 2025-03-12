@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgdghhvi8777m"]
+[gd_scene load_steps=6 format=3 uid="uid://dgdghhvi8777m"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cenacafe.gd" id="1_m41h1"]
 [ext_resource type="Texture2D" uid="uid://0ts4bst1tlq1" path="res://Assets/Sprites/spritescenacafe/cenacafeblackwhite.png" id="2_6wwfe"]
 [ext_resource type="PackedScene" uid="uid://b4le4ka4mds6v" path="res://Assets/Scenes/cafeteiragrande.tscn" id="3_gl5ms"]
 [ext_resource type="Script" path="res://Assets/Scenes/texture_rect.gd" id="4_1yw5g"]
 [ext_resource type="Texture2D" uid="uid://c8kfcfeprgrqf" path="res://Assets/Sprites/spritescenacafe/cafe.png" id="4_hdlf1"]
-[ext_resource type="Script" path="res://Assets/Scenes/texture_rect_2.gd" id="6_6harq"]
-[ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_qi7ed"]
 
 [node name="cenacafe" type="Node2D"]
 script = ExtResource("1_m41h1")
@@ -15,7 +13,6 @@ script = ExtResource("1_m41h1")
 position = Vector2(576.5, 326)
 scale = Vector2(2.39375, 1.78889)
 texture = ExtResource("2_6wwfe")
-metadata/_edit_lock_ = true
 
 [node name="cafeteiragrande" parent="." instance=ExtResource("3_gl5ms")]
 position = Vector2(578, 347)
@@ -33,7 +30,6 @@ script = ExtResource("4_1yw5g")
 
 [node name="panel1" type="Panel" parent="TextureRect1"]
 show_behind_parent = true
-layout_mode = 0
 offset_right = 81.0
 offset_bottom = 54.0
 mouse_filter = 2
@@ -46,7 +42,7 @@ offset_top = 420.0
 offset_right = 619.0
 offset_bottom = 474.0
 expand_mode = 1
-script = ExtResource("6_6harq")
+script = ExtResource("4_1yw5g")
 
 [node name="panel2" type="Panel" parent="TextureRect2"]
 show_behind_parent = true
@@ -55,22 +51,3 @@ offset_right = 81.0
 offset_bottom = 54.0
 mouse_filter = 2
 metadata/_edit_lock_ = true
-
-[node name="gotascafe" type="CPUParticles2D" parent="."]
-position = Vector2(578, 375)
-emitting = false
-amount = 50
-lifetime = 0.37
-color = Color(0.31, 0.207907, 0.1488, 1)
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="cafepronto" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(586, 426)
-scale = Vector2(3, 3)
-texture = ExtResource("7_qi7ed")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgdghhvi8777m"]
+[gd_scene load_steps=10 format=3 uid="uid://dgdghhvi8777m"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cenacafe.gd" id="1_m41h1"]
 [ext_resource type="Texture2D" uid="uid://0ts4bst1tlq1" path="res://Assets/Sprites/spritescenacafe/cenacafeblackwhite.png" id="2_6wwfe"]
@@ -6,7 +6,43 @@
 [ext_resource type="Script" path="res://Assets/Scenes/texture_rect.gd" id="4_1yw5g"]
 [ext_resource type="Texture2D" uid="uid://c8kfcfeprgrqf" path="res://Assets/Sprites/spritescenacafe/cafe.png" id="4_hdlf1"]
 [ext_resource type="Script" path="res://Assets/Scenes/texture_rect_2.gd" id="6_6harq"]
-[ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_qi7ed"]
+
+[sub_resource type="Animation" id="Animation_y2quv"]
+resource_name = "cafe"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_2p6jj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pa6w4"]
+_data = {
+"RESET": SubResource("Animation_2p6jj"),
+"cafe": SubResource("Animation_y2quv")
+}
 
 [node name="cenacafe" type="Node2D"]
 script = ExtResource("1_m41h1")
@@ -15,7 +51,6 @@ script = ExtResource("1_m41h1")
 position = Vector2(576.5, 326)
 scale = Vector2(2.39375, 1.78889)
 texture = ExtResource("2_6wwfe")
-metadata/_edit_lock_ = true
 
 [node name="cafeteiragrande" parent="." instance=ExtResource("3_gl5ms")]
 position = Vector2(578, 347)
@@ -56,21 +91,14 @@ offset_bottom = 54.0
 mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="gotascafe" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(578, 375)
 emitting = false
 amount = 50
-lifetime = 0.37
+lifetime = 0.4
 color = Color(0.31, 0.207907, 0.1488, 1)
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="cafepronto" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(586, 426)
-scale = Vector2(3, 3)
-texture = ExtResource("7_qi7ed")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="cafecaindo" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pa6w4")
+}
