@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2nksmmvwv3hi"
-path="res://.godot/imported/dialogue box.png-c6ecf3204f3bf0bc474ad51dfc890033.ctex"
+uid="uid://dh5kkiwplh7a8"
+path="res://.godot/imported/choice-pressed.png-5e8960f3444f8c5f5993caaa7be1b056.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Timelines/dialogue box.png"
-dest_files=["res://.godot/imported/dialogue box.png-c6ecf3204f3bf0bc474ad51dfc890033.ctex"]
+source_file="res://Assets/Timelines/Estilo/choice-pressed.png"
+dest_files=["res://.godot/imported/choice-pressed.png-5e8960f3444f8c5f5993caaa7be1b056.ctex"]
 
 [params]
 

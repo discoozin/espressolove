@@ -1,0 +1,16 @@
+[style name="cafeteira"]
+- Expresso
+	set {expresso} = 1
+	set {animcafe} = 1
+	set {cappucino} = 0
+	set {cafeleite} = 0
+- Capuccino
+	set {cappucino} = 1
+	set {animcafe} = 1
+	set {expresso} = 0
+	set {cafeleite} = 0
+- Café com leite
+	set {cafeleite} = 1
+	set {animcafe} = 1
+	set {expresso} = 0
+	set {cappucino} = 0

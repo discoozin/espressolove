@@ -27,16 +27,23 @@ directories/dch_directory={
 "Iris": "res://Assets/Character/Iris.dch"
 }
 directories/dtl_directory={
+"montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
 }
 variables={
+"animcafe": 0.0,
+"animnpc": 0.0,
+"cafeleite": 0.0,
+"cappucino": 0.0,
+"cont_pedido": 0.0,
+"expresso": 0.0,
 "podeandar": false,
 "tutorial": 0.0
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://Assets/Timelines/Estilo/style_dialogic.tres", "res://Assets/Timelines/Estilo/cafeteira.tres"]
+layout/default_style="res://Assets/Timelines/Estilo/style_dialogic.tres"
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

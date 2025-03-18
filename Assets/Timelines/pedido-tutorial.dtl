@@ -36,3 +36,32 @@ if {tutorial} == 1:
 	# VAI VOLTAR PRO DIALOGO COM O GERENTE
 	set {tutorial} = 2
 	set {podeandar} = false
+# VERIFICA QUAL CAFÉ O JOGADOR FEZ, E DEPENDENDO TEM UMA RESPOSTA DIFERENTE
+# TAMBEM FAZ A VERIFICAÇÃO DE QUANTAS VEZES O JOGADOR FEZ O PEDIDO ERRADO
+# nessa caso, o expresso é o pedido certo
+if {expresso} == 1:
+	Iris: Pelo cheiro parece estar ótimo, obrigado.
+	set {expresso} = 0
+# AQUI É O PEDIDO ERRADO
+if {cappucino} == 1:
+	if {cont_pedido} == 2:
+		Iris: É o terceiro pedido errado que você entrega. Vou embora.
+		set {cappucino} = 0
+		set {cont_pedido} = 0
+		# faz ele ir embora
+		set {animnpc} = 1
+	elif {cont_pedido} <= 1:
+		Iris: Não foi isso que eu pedi, eu pedi um Expresso.
+		set {cont_pedido} += 1
+		set {cappucino} = 0
+if {cafeleite} == 1:
+	if {cont_pedido} == 2:
+		Iris: É o terceiro pedido errado que você entrega. Vou embora.
+		set {cont_pedido} = 0
+		set {cafeleite} = 0
+		# faz ele ir embora
+		set {animnpc} = 1
+	elif {cont_pedido} <= 1:
+		Iris: Não foi isso que eu pedi, eu pedi um Expresso.
+		set {cont_pedido} += 1
+		set {cafeleite} = 0

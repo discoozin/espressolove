@@ -3,6 +3,8 @@ extends CharacterBody2D
 #exporta a variavel dialogo, sendo possivel alterar fora do codigo
 @export var dialogo: String
 
+var anim
+
 #não precisa de explicação, é só a variavel pra ver se da pra interagir ou não BURRO BURRO BURRO
 var interativo = false
 
@@ -19,7 +21,11 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 #TU SABE OQ O _PROCESS FAZ NÉ?
 func _process(delta: float) -> void:
+	anim = Dialogic.VAR.get("animnpc")
 	#o if verifica se a tecla E ta sendo pressionada e se o interativo é verdadeiro, se sim
 	#ele executa o Dialogic, acho que da pra fazer o player parar de andar com isso aqui, mas não sei dizer
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
+	if anim == 1:
+		$"../AnimationPlayer".play("npc_embora")
+		Dialogic.VAR.set("animnpc", 0)

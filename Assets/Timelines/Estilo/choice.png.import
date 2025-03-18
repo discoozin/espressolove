@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bodflejw6fe70"
-path="res://.godot/imported/next.svg-4bf5925bc4c93227633ae44b7553e673.ctex"
+uid="uid://ch8rk7llss1ks"
+path="res://.godot/imported/choice.png-e754cfda6744c19845624874544763e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Timelines/Estilo/VisualNovelTextbox/next.svg"
-dest_files=["res://.godot/imported/next.svg-4bf5925bc4c93227633ae44b7553e673.ctex"]
+source_file="res://Assets/Timelines/Estilo/choice.png"
+dest_files=["res://.godot/imported/choice.png-e754cfda6744c19845624874544763e1.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
