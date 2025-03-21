@@ -1,14 +1,15 @@
-[gd_scene load_steps=17 format=4 uid="uid://b2rkfce0q70bh"]
+[gd_scene load_steps=18 format=4 uid="uid://b2rkfce0q70bh"]
 
 [ext_resource type="PackedScene" uid="uid://b8fosplnjvvb2" path="res://Assets/Scenes/player.tscn" id="1_5at1s"]
 [ext_resource type="Texture2D" uid="uid://d3dlfo5e8phf0" path="res://Assets/Tilemap/terreno.png" id="1_17m6b"]
-[ext_resource type="Script" path="res://Assets/Scripts/main.gd" id="1_juihe"]
 [ext_resource type="PackedScene" uid="uid://dxe8d365hwk6o" path="res://Assets/Scenes/gerente.tscn" id="2_llwa5"]
 [ext_resource type="Texture2D" uid="uid://d3hqao2dq6vll" path="res://Assets/Tilemap/moveis.png" id="2_nt63c"]
 [ext_resource type="PackedScene" uid="uid://cetfh10kdeq4k" path="res://Assets/Scenes/cliente_generico_1.tscn" id="3_rywk3"]
 [ext_resource type="Texture2D" uid="uid://cs3jvjn4wely2" path="res://Assets/Tilemap/cafes.png" id="3_sy8oq"]
+[ext_resource type="PackedScene" uid="uid://elu2sijtn75d" path="res://Assets/Scenes/iris.tscn" id="6_tneln"]
 [ext_resource type="PackedScene" uid="uid://baqoeulcx21kj" path="res://Assets/Scenes/cafeteira.tscn" id="7_v8ymj"]
-[ext_resource type="PackedScene" uid="uid://lkpu6lhrluyi" path="res://Assets/Scenes/cliente_generico_2.tscn" id="8_24rxs"]
+[ext_resource type="Script" path="res://Assets/Scripts/portaestoque.gd" id="8_ldgye"]
+[ext_resource type="PackedScene" uid="uid://b8l5t2kgjpdue" path="res://Assets/Scenes/cliente_generico_2.tscn" id="9_cyc5t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eukkx"]
 texture = ExtResource("1_17m6b")
@@ -138,7 +139,6 @@ size = Vector2(9, 16)
 
 [node name="main" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_juihe")
 
 [node name="tilemaps" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -156,10 +156,9 @@ tile_map_data = PackedByteArray("AAAQAAwAAAAAAAAAAAARAA4AAAAEAAAAAAATAA4AAAAAAAE
 tile_set = SubResource("TileSet_3ktwg")
 
 [node name="characters" type="Node2D" parent="."]
-y_sort_enabled = true
 
 [node name="player" parent="characters" instance=ExtResource("1_5at1s")]
-position = Vector2(128, 241)
+position = Vector2(305, 159)
 collision_mask = 15
 
 [node name="Camera2D" type="Camera2D" parent="characters/player"]
@@ -170,15 +169,19 @@ zoom = Vector2(4, 4)
 position = Vector2(330, 117)
 collision_layer = 2
 
+[node name="iris" parent="characters" instance=ExtResource("6_tneln")]
+position = Vector2(66, 133)
+dialogo = "pedidoiris1"
+
 [node name="levels" type="Node2D" parent="."]
-y_sort_enabled = true
 
 [node name="cafeteira" parent="levels" instance=ExtResource("7_v8ymj")]
-position = Vector2(326, 153)
+position = Vector2(327, 153)
 
 [node name="salaestoque" type="Area2D" parent="levels"]
 unique_name_in_owner = true
 position = Vector2(334, 214)
+script = ExtResource("8_ldgye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="levels/salaestoque"]
 position = Vector2(-1.5, 2)
@@ -187,14 +190,15 @@ metadata/_edit_lock_ = true
 
 [node name="Marker2D" type="Marker2D" parent="levels/salaestoque"]
 
-[node name="npcs" type="Node2D" parent="."]
-y_sort_enabled = true
+[node name="npc" type="Node2D" parent="."]
 
-[node name="cliente_generico_1" parent="npcs" instance=ExtResource("8_24rxs")]
-position = Vector2(159, 116)
-
-[node name="cliente_generico_2" parent="npcs" instance=ExtResource("3_rywk3")]
-position = Vector2(114, 197)
+[node name="cliente_generico_1" parent="npc" instance=ExtResource("3_rywk3")]
+position = Vector2(112, 196)
 collision_layer = 2
 
-[connection signal="body_entered" from="levels/salaestoque" to="." method="_on_salaestoque_body_entered"]
+[node name="cliente_generico_2" parent="npc" instance=ExtResource("9_cyc5t")]
+position = Vector2(160, 116)
+dialogo = "pedido2"
+
+[connection signal="body_entered" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_entered"]
+[connection signal="body_exited" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_exited"]

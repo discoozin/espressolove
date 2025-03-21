@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgdghhvi8777m"]
+[gd_scene load_steps=11 format=3 uid="uid://dgdghhvi8777m"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cenacafe.gd" id="1_m41h1"]
 [ext_resource type="Texture2D" uid="uid://0ts4bst1tlq1" path="res://Assets/Sprites/spritescenacafe/cenacafeblackwhite.png" id="2_6wwfe"]
@@ -8,8 +8,10 @@
 [ext_resource type="Script" path="res://Assets/Scripts/texture_rect_2.gd" id="6_6harq"]
 [ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_qi7ed"]
 [ext_resource type="AudioStream" uid="uid://pg46uexi8kca" path="res://Assets/SFX/somcafe.mp3" id="8_1o27a"]
+[ext_resource type="Texture2D" uid="uid://c80ywj1awh2hd" path="res://Assets/Sprites/bloquinho_pretobranco.png" id="9_kyu06"]
+[ext_resource type="FontFile" uid="uid://dfuxuw8qsfp7x" path="res://Assets/Timelines/Estilo/Caveat-VariableFont_wght.ttf" id="10_fyleq"]
 
-[node name="cafecena" type="Node2D"]
+[node name="cenacafe" type="Node2D"]
 script = ExtResource("1_m41h1")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -37,7 +39,7 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 81.0
 offset_bottom = 54.0
-mouse_filter = 1
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -58,7 +60,7 @@ mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="gotascafe" type="CPUParticles2D" parent="."]
-position = Vector2(579, 378)
+position = Vector2(578, 377)
 emitting = false
 amount = 50
 lifetime = 0.37
@@ -79,5 +81,30 @@ texture = ExtResource("7_qi7ed")
 
 [node name="somcafe" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_1o27a")
+
+[node name="BloquinhoPretobranco" type="Sprite2D" parent="."]
+position = Vector2(991.562, 438.438)
+scale = Vector2(3.71406, 3.54875)
+texture = ExtResource("9_kyu06")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 917.0
+offset_top = 375.0
+offset_right = 1225.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -8
+theme_override_fonts/font = ExtResource("10_fyleq")
+theme_override_font_sizes/font_size = 29
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 333.0
+offset_top = 43.0
+offset_right = 797.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -8
+theme_override_font_sizes/font_size = 30
+text = "Aperte \"E\" para sair da cafeteira"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

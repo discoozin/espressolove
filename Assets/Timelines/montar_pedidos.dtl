@@ -1,15 +1,19 @@
+# ORDEM3
 [style name="cafeteira"]
 - Expresso
 	set {expresso} = 1
 	set {animcafe} = 1
 	set {cappucino} = 0
 	set {cafeleite} = 0
+	set {ordempedido} = 4
 - Capuccino
+	set {ordempedido} = 4
 	set {cappucino} = 1
 	set {animcafe} = 1
 	set {expresso} = 0
 	set {cafeleite} = 0
 - Café com leite
+	set {ordempedido} = 4
 	set {cafeleite} = 1
 	set {animcafe} = 1
 	set {expresso} = 0

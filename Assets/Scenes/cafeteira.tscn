@@ -1,11 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://baqoeulcx21kj"]
+[gd_scene load_steps=8 format=3 uid="uid://baqoeulcx21kj"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cafeteira.gd" id="1_sdlsl"]
 [ext_resource type="Texture2D" uid="uid://dba3srmdt6rp" path="res://Assets/Sprites/cafeteira/cafeteira.png" id="1_vhlkl"]
+[ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="3_6jbc8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_awxe3"]
 radius = 12.0
 height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dttcu"]
+atlas = ExtResource("3_6jbc8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byknk"]
+atlas = ExtResource("3_6jbc8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lt34x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dttcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byknk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="cafeteira" type="Area2D"]
 collision_layer = 8
@@ -21,6 +44,11 @@ shape = SubResource("CapsuleShape2D_awxe3")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-7, 0)
+
+[node name="exclamacao3" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -21)
+sprite_frames = SubResource("SpriteFrames_lt34x")
+autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

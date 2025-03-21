@@ -1,67 +1,80 @@
+# ORDEM 1
 # VAMOS UTILIZAR A IRIS NO TUTORIAL PROVISORIAMENTE, POR ISSO QUE OS DIALOGOS SEREM DE NPC GENERICO
 if {tutorial} == 1:
 	set {podeandar} = true
 	join David right
 	# APENAS COMENTANDO PRA NÃO SE PERDER, EU SEI QUE TU NÃO É BURRO E TU SABE Q ISSO É AS ESCOLHAS DO PRIMEIRO DIALOGO
 	- Bom dia, qual vai ser o pedido?
-		join Iris leftmost
-		Iris: Bom dia, Você é novo por aqui não é?
+		Bernardo: Bom dia, Você é novo por aqui não é?
 		- Sim, hoje é meu primeiro dia, qual vai ser seu pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 		- Sim, ainda estou me acostumando ao novo emprego, qual vai ser seu pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 		- É, estou começando agora. E aí, qual vai ser o pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 	- Bom dia, como vai?
-		join Iris leftmost
-		Iris: Bom dia, eu estou bem. Você é novo por aqui não é?
+		Bernardo: Bom dia, eu estou bem. Você é novo por aqui não é?
 		- Sim, hoje é meu primeiro dia, qual vai ser seu pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 		- Sim, ainda estou me acostumando ao novo emprego, qual vai ser seu pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 		- É, estou começando agora. E aí, qual vai ser o pedido?
-			Iris: Eu vou querer um Expresso Simples por favor
+			Bernardo: Eu vou querer um Expresso Simples por favor
 			David: Só um momento, vou preparar seu pedido.
+			set {qualcafe} = 1
 			leave --All--
 	# VAI VOLTAR PRO DIALOGO COM O GERENTE
 	set {tutorial} = 2
 	set {podeandar} = false
+	set {ordempedido} = 2
+# ORDEM 4
 # VERIFICA QUAL CAFÉ O JOGADOR FEZ, E DEPENDENDO TEM UMA RESPOSTA DIFERENTE
 # TAMBEM FAZ A VERIFICAÇÃO DE QUANTAS VEZES O JOGADOR FEZ O PEDIDO ERRADO
 # nessa caso, o expresso é o pedido certo
 if {expresso} == 1:
-	Iris: Pelo cheiro parece estar ótimo, obrigado.
+	Bernardo: Pelo cheiro parece estar ótimo, obrigado.
 	set {expresso} = 0
+	set {ordempedido} = 5
 # AQUI É O PEDIDO ERRADO
+# VOLTA ORDEM 3
 if {cappucino} == 1:
 	if {cont_pedido} == 2:
-		Iris: É o terceiro pedido errado que você entrega. Vou embora.
+		Bernardo: É o terceiro pedido errado que você entrega. Vou embora.
 		set {cappucino} = 0
 		set {cont_pedido} = 0
 		# faz ele ir embora
 		set {animnpc} = 1
+		set {ordempedido} = 3
 	elif {cont_pedido} <= 1:
-		Iris: Não foi isso que eu pedi, eu pedi um Expresso.
+		Bernardo: Não foi isso que eu pedi, eu pedi um Expresso.
 		set {cont_pedido} += 1
 		set {cappucino} = 0
+		set {ordempedido} = 3
 if {cafeleite} == 1:
 	if {cont_pedido} == 2:
-		Iris: É o terceiro pedido errado que você entrega. Vou embora.
+		Bernardo: É o terceiro pedido errado que você entrega. Vou embora.
 		set {cont_pedido} = 0
 		set {cafeleite} = 0
 		# faz ele ir embora
 		set {animnpc} = 1
+		set {ordempedido} = 3
 	elif {cont_pedido} <= 1:
-		Iris: Não foi isso que eu pedi, eu pedi um Expresso.
+		Bernardo: Não foi isso que eu pedi, eu pedi um Expresso.
 		set {cont_pedido} += 1
 		set {cafeleite} = 0
+		set {ordempedido} = 3

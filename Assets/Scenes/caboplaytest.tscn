@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://r03qhgov0gmo"]
+
+[ext_resource type="Texture2D" uid="uid://gv4tccnqpikx" path="res://Assets/Scenes/O.png" id="1_evj0t"]
+
+[node name="caboplaytest" type="Node2D"]
+
+[node name="O" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1, 1)
+texture = ExtResource("1_evj0t")

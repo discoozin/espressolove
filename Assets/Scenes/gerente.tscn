@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxe8d365hwk6o"]
+[gd_scene load_steps=14 format=3 uid="uid://dxe8d365hwk6o"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/gerente.gd" id="1_oey1a"]
 [ext_resource type="Texture2D" uid="uid://c43ip8w2o0ee3" path="res://Assets/Sprites/evander/idle (frente) evander (sem cor) - sheet.png" id="1_vg4tx"]
+[ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="3_fwph8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1s3o"]
 atlas = ExtResource("1_vg4tx")
@@ -45,9 +46,30 @@ size = Vector2(20, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8lsc"]
 size = Vector2(26, 18)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dttcu"]
+atlas = ExtResource("3_fwph8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byknk"]
+atlas = ExtResource("3_fwph8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_25son"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dttcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byknk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="gerente" type="CharacterBody2D"]
 script = ExtResource("1_oey1a")
-dialogo = "tutorial"
 
 [node name="animacao" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -4)
@@ -64,6 +86,12 @@ shape = SubResource("RectangleShape2D_1m5d3")
 [node name="interação1" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_b8lsc")
+
+[node name="exclamacao2" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -21)
+sprite_frames = SubResource("SpriteFrames_25son")
+autoplay = "default"
+frame_progress = 0.85152
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

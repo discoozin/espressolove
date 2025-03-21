@@ -1,0 +1,6 @@
+# ORDEM 5
+if {ordempedido} == 5:
+	Evander: Ótimo trabalho, pelo visto o cliente ficou bem satisfeito com o café que você preparou.
+	Evander: Você está se saindo muito bem. Se continuar fazendo um bom trabalho, vou te contratar por tempo integral.
+	set {ordempedido} = 6
+	# Finaliza o playtest

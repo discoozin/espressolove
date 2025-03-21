@@ -18,18 +18,22 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Global="*res://global.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Bernardo": "res://Assets/Character/Bernardo.dch",
 "David": "res://Assets/Character/David.dch",
 "Evander": "res://Assets/Character/Evander.dch",
-"Iris": "res://Assets/Character/Iris.dch"
+"Iris": "res://Assets/Character/Iris.dch",
+"Senhorinha": "res://Assets/Character/Senhorinha.dch"
 }
 directories/dtl_directory={
+"evander2": "res://Assets/Timelines/evander2.dtl",
 "montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
+"pedido2": "res://Assets/Character/pedido2.dtl",
+"pedidoiris1": "res://Assets/Timelines/pedidoiris1.dtl",
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
 }
 variables={
@@ -39,7 +43,10 @@ variables={
 "cappucino": 0.0,
 "cont_pedido": 0.0,
 "expresso": 0.0,
+"mudatextger": 0.0,
+"ordempedido": 0.0,
 "podeandar": false,
+"qualcafe": 0.0,
 "tutorial": 0.0
 }
 glossary/default_case_sensitive=true

@@ -1,18 +1,25 @@
+# ORDEM 0
 # Essa variavel diz as etapas do tutorial
 if {tutorial} == 0:
 	set {podeandar} = true
+	# 
 	join Evander left
 	join David right
 	Evander: Seja bem-vindo ao seu primeiro dia de trabalho aqui na cafeteria. Vamos começar o seu treinamento.
+	Evander: Primeiro, vamos anotar o pedido do cliente. Aperte a tecla E quando estiver perto do cliente.
 	leave --All--
 	set {tutorial} = 1
 	set {podeandar} = false
+	set {ordempedido} = 1
 	# vai levar para outro dialogo
 	# continuação do pedido no "pedido-tutorial"
+# ORDEM2
 elif {tutorial} == 2:
 	set {podeandar} = true
 	join Evander center
-	Evander: O Cliente está pedindo um "Expresso Simples" vou te mostrar como faz 
+	Evander: O Cliente está pedindo um "Expresso Simples" vou te mostrar como faz
 	Evander: Interaja com a cafeteira apertando "E", pegue a xícara e coloque na cafeteira.
 	leave Evander
 	set {podeandar} = false
+	set {mudatextger} = 1
+	set {ordempedido} = 3
