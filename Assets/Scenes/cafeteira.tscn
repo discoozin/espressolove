@@ -16,7 +16,11 @@ script = ExtResource("1_sdlsl")
 texture = ExtResource("1_vhlkl")
 
 [node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 0)
 shape = SubResource("CapsuleShape2D_awxe3")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-7, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

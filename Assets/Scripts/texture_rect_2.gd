@@ -3,6 +3,7 @@ extends TextureRect
 @onready var panel_2: Panel = $panel2
 @onready var gotascafe: CPUParticles2D = $"../gotascafe"
 @onready var timer: Timer = $"../Timer"
+@onready var somcafe: AudioStreamPlayer2D = $"../somcafe"
 var escolha
 
 func _process(delta: float) -> void:
@@ -12,7 +13,7 @@ func _process(delta: float) -> void:
 		gotascafe.emitting=true
 		timer.start()
 		Dialogic.VAR.set("animcafe", 0)
-		
+		somcafe.play()
 func _can_drop_data(_pos, data):
 	return data is Texture2D
 
@@ -21,4 +22,3 @@ func _drop_data(_pos, data):
 	texture=data
 	panel_1.queue_free()
 	panel_2.visible=false
-	

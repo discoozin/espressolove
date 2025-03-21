@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b2rkfce0q70bh"]
+[gd_scene load_steps=16 format=4 uid="uid://b2rkfce0q70bh"]
 
 [ext_resource type="PackedScene" uid="uid://b8fosplnjvvb2" path="res://Assets/Scenes/player.tscn" id="1_5at1s"]
 [ext_resource type="Texture2D" uid="uid://d3dlfo5e8phf0" path="res://Assets/Tilemap/terreno.png" id="1_17m6b"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cetfh10kdeq4k" path="res://Assets/Scenes/cliente_generico_1.tscn" id="3_rywk3"]
 [ext_resource type="Texture2D" uid="uid://cs3jvjn4wely2" path="res://Assets/Tilemap/cafes.png" id="3_sy8oq"]
 [ext_resource type="PackedScene" uid="uid://baqoeulcx21kj" path="res://Assets/Scenes/cafeteira.tscn" id="7_v8ymj"]
-[ext_resource type="Script" path="res://Assets/Scenes/portaestoque.gd" id="8_ldgye"]
+[ext_resource type="Script" path="res://Assets/Scripts/portaestoque.gd" id="8_ldgye"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eukkx"]
 texture = ExtResource("1_17m6b")
@@ -135,118 +135,58 @@ sources/0 = SubResource("TileSetAtlasSource_yvknw")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwaqn"]
 size = Vector2(9, 16)
 
-[sub_resource type="Animation" id="Animation_l0o16"]
-resource_name = "npc_embora"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("cliente_generico_1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(127, 200), Vector2(126, 227), Vector2(125, 252), Vector2(128, 287)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("cliente_generico_1:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_lefah"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("cliente_generico_1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(127, 200)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("cliente_generico_1:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0w31j"]
-_data = {
-"RESET": SubResource("Animation_lefah"),
-"npc_embora": SubResource("Animation_l0o16")
-}
-
 [node name="main" type="Node2D"]
 y_sort_enabled = true
 
-[node name="level" type="Node2D" parent="."]
+[node name="tilemaps" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="terreno" type="TileMapLayer" parent="level"]
+[node name="terreno" type="TileMapLayer" parent="tilemaps"]
 tile_map_data = PackedByteArray("AAADAAkAAwAAAAMAAAADAAoAAwAAAAMAAAADAAsAAwAAAAMAAAADAAwAAwAAAAMAAAADAA0AAwAAAAMAAAADAA4AAwAAAAMAAAADAA8AAwAAAAMAAAAEAAgAAwAAAAMAAAAEAAkAAwAAAAMAAAAEAAoAAwAAAAMAAAAEAAsAAwAAAAMAAAAEAAwAAwAAAAMAAAAEAA0AAwAAAAMAAAAEAA4AAwAAAAMAAAAEAA8AAwAAAAMAAAAFAAgAAwAAAAMAAAAFAAkAAwAAAAMAAAAFAAoAAwAAAAMAAAAFAAsAAwAAAAMAAAAFAAwAAwAAAAMAAAAFAA0AAwAAAAMAAAAFAA4AAwAAAAMAAAAFAA8AAwAAAAMAAAAGAAgAAwAAAAMAAAAGAAkAAwAAAAMAAAAGAAoAAwAAAAMAAAAGAAsAAwAAAAMAAAAGAAwAAwAAAAMAAAAGAA0AAwAAAAMAAAAHAAgAAwAAAAMAAAAHAAkAAwAAAAMAAAAHAAoAAwAAAAMAAAAHAAsAAwAAAAMAAAAHAAwAAwAAAAMAAAAHAA0AAwAAAAMAAAAIAAgAAwAAAAMAAAAIAAkAAwAAAAMAAAAIAAoAAwAAAAMAAAAIAAsAAwAAAAMAAAAIAAwAAwAAAAMAAAAIAA0AAwAAAAMAAAAIAA4AAwAAAAMAAAAIAA8AAwAAAAMAAAAJAAgAAwAAAAMAAAAJAAkAAwAAAAMAAAAJAAoAAwAAAAMAAAAJAAsAAwAAAAMAAAAJAAwAAwAAAAMAAAAJAA0AAwAAAAMAAAAJAA4AAwAAAAMAAAAJAA8AAwAAAAMAAAAKAAgAAwAAAAMAAAAKAAkAAwAAAAMAAAAKAAoAAwAAAAMAAAAKAAsAAwAAAAMAAAAKAAwAAwAAAAMAAAAKAA0AAwAAAAMAAAAKAA4AAwAAAAMAAAAKAA8AAwAAAAMAAAALAAgAAwAAAAMAAAALAAkAAwAAAAMAAAALAAoAAwAAAAMAAAALAAsAAwAAAAMAAAALAAwAAwAAAAMAAAALAA0AAwAAAAMAAAALAA4AAwAAAAMAAAALAA8AAwAAAAMAAAAMAAgAAwAAAAMAAAAMAAkAAwAAAAMAAAAMAAoAAwAAAAMAAAAMAAsAAwAAAAMAAAAMAAwAAwAAAAMAAAAMAA0AAwAAAAMAAAAMAA4AAwAAAAMAAAAMAA8AAwAAAAMAAAANAAgAAwAAAAMAAAANAAkAAwAAAAMAAAANAAoAAwAAAAMAAAANAAsAAwAAAAMAAAANAAwAAwAAAAMAAAANAA0AAwAAAAMAAAANAA4AAwAAAAMAAAANAA8AAwAAAAMAAAAGAA4AAwAAAAMAAAAGAA8AAwAAAAMAAAAHAA4AAwAAAAMAAAAHAA8AAwAAAAMAAAADAAcAAwAAAAMAAAAEAAcAAwAAAAMAAAAFAAcAAwAAAAMAAAAGAAcAAwAAAAMAAAAHAAcAAwAAAAMAAAAIAAcAAwAAAAMAAAAJAAcAAwAAAAMAAAAKAAcAAwAAAAMAAAALAAcAAwAAAAMAAAAMAAcAAwAAAAMAAAANAAcAAwAAAAMAAAACAAcAAwADAAQAAAANABAAAwAEAAUAAAAMABAAAwAEAAUAAAALABAAAwAEAAUAAAAKABAAAwAEAAUAAAAJABAAAwAEAAUAAAAIABAAAwACAAIAAAAHABAAAwACAAIAAAAGABAAAwAEAAUAAAAFABAAAwAEAAUAAAAEABAAAwAEAAUAAAADABAAAwAEAAUAAAACABAAAwAEAAIAAAACAA8AAwADAAQAAAACAA4AAwADAAQAAAACAA0AAwADAAQAAAACAAwAAwADAAQAAAACAAsAAwADAAQAAAACAAoAAwADAAQAAAACAAkAAwADAAQAAAACAAgAAwADAAQAAAADAAYAAwAAAAEAAAAEAAYAAwAAAAEAAAAFAAYAAwAAAAEAAAAGAAYAAwAAAAEAAAAHAAYAAwAAAAEAAAAIAAYAAwAAAAEAAAAJAAYAAwAAAAEAAAAKAAYAAwAAAAEAAAALAAYAAwAAAAEAAAAMAAYAAwAAAAEAAAANAAYAAwAAAAEAAAACAAYAAwADAAQAAAADAAUAAwAAAAAAAAAEAAUAAwABAAAAAAAFAAUAAwAAAAAAAAAHAAUAAwAEAAAAAAAIAAUAAwAAAAAAAAAJAAUAAwAAAAAAAAAKAAUAAwACAAAAAAALAAUAAwAAAAAAAAAMAAUAAwAAAAAAAAANAAUAAwAAAAAAAAADAAgAAwAAAAMAAAACAAUAAwADAAQAAAAOAAYAAwAAAAEAAAAOAAcAAwAAAAMAAAAOAAgAAwAAAAMAAAAOAAkAAwAAAAMAAAAOAAoAAwAAAAMAAAAOAAsAAwAAAAMAAAAOAAwAAwAAAAMAAAAOAA0AAwAAAAMAAAAOAA4AAwAAAAMAAAAOAA8AAwAAAAMAAAAOABAAAwAEAAUAAAAOAAUAAwAAAAAAAAAPAAUAAwADAAAAAAAPAAYAAwAAAAEAAAAPAAcAAwAAAAMAAAAPAAgAAwAAAAMAAAAPAAkAAwAAAAMAAAAPAAoAAwAAAAMAAAAPAAsAAwAAAAMAAAAPAAwAAwAAAAMAAAAPAA0AAwAAAAMAAAAPAA4AAwAAAAMAAAAPAA8AAwAAAAMAAAAQAAUAAwAAAAAAAAAQAAYAAwAAAAEAAAAQAAcAAwAAAAMAAAAQAAgAAwAAAAMAAAAQAAkAAwAAAAMAAAAQAAoAAwAAAAMAAAAQAAsAAwAAAAMAAAAQAAwAAwAAAAMAAAAQAA0AAwAAAAMAAAAQAA4AAwAAAAMAAAAQAA8AAwAAAAMAAAAPAAQAAwAEAAMAAAAQAAQAAwAEAAMAAAAPABAAAwAEAAUAAAAQABAAAwAEAAUAAAARAAcAAwAAAAMAAAARAAgAAwAAAAMAAAARAAkAAwAAAAMAAAARAAoAAwAAAAMAAAARAAsAAwAAAAMAAAARAAwAAwAAAAMAAAARAA0AAwAAAAMAAAARAA4AAwAAAAMAAAARAA8AAwAAAAMAAAASAAcAAwAAAAMAAAASAAgAAwAAAAMAAAASAAkAAwAAAAMAAAASAAoAAwAAAAMAAAASAAsAAwAAAAMAAAASAAwAAwAAAAMAAAASAA0AAwAAAAMAAAASAA4AAwAAAAMAAAASAA8AAwAAAAMAAAATAAcAAwAAAAMAAAATAAgAAwAAAAMAAAATAAkAAwAAAAMAAAATAAoAAwAAAAMAAAATAAsAAwAAAAMAAAATAAwAAwAAAAMAAAATAA0AAwAAAAMAAAATAA4AAwAAAAMAAAATAA8AAwAAAAMAAAAUAAcAAwAAAAMAAAAUAAgAAwAAAAMAAAAUAAkAAwAAAAMAAAAUAAoAAwAAAAMAAAAUAAsAAwAAAAMAAAAUAAwAAwAAAAMAAAAUAA0AAwAAAAMAAAAUAA4AAwAAAAMAAAAUAA8AAwAAAAMAAAARABAAAwAEAAUAAAASABAAAwAEAAUAAAATABAAAwAEAAUAAAAUABAAAwAEAAUAAAARAAQAAwAEAAMAAAASAAQAAwAEAAMAAAATAAQAAwAEAAMAAAAUAAQAAwAEAAMAAAAVAAcAAwAFAAQAAAAVAAgAAwAFAAQAAAAVAAkAAwAFAAQAAAAVAAoAAwAFAAQAAAAVAAsAAwAFAAQAAAAVAAwAAwAFAAQAAAAVAA0AAwADAAIAAAAVAA4AAwAFAAQAAAAVAA8AAwAFAAQAAAAVABAAAwAFAAIAAAARAAYAAwAAAAEAAAASAAYAAwAAAAEAAAATAAYAAwAAAAEAAAAUAAYAAwAAAAEAAAARAAUAAwAAAAAAAAASAAUAAwAAAAAAAAATAAUAAwAEAAAAAAAUAAUAAwAAAAAAAAAVAAYAAwAFAAQAAAAVAAUAAwAFAAQAAAAOAAQAAwAEAAMAAAANAAQAAwAEAAMAAAAMAAQAAwAEAAMAAAALAAQAAwAEAAMAAAAKAAQAAwAEAAMAAAAJAAQAAwAEAAMAAAAIAAQAAwAEAAMAAAAHAAQAAwAEAAMAAAAGAAQAAwAEAAMAAAAFAAQAAwAEAAMAAAAEAAQAAwAEAAMAAAADAAQAAwAEAAMAAAACAAQAAwAEAAEAAAAVAAQAAwAFAAEAAAAGAAUAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_ss60k")
 
-[node name="moveis" type="TileMapLayer" parent="level"]
-tile_map_data = PackedByteArray("AAAHAAkAAAAAAAMAAAAFAAkAAAADAAQAAAAJAAkAAAAGAAQAAAAUAAoAAAASAAEAAAAUAAkAAAASAAEAAAAUAAgAAAASAAAAAAAQAA8AAAAPAAUAAAAQAAoAAAAPAAAAAAAQAAsAAAAPAAMAAAAQAAwAAAAPAAMAAAAQAA0AAAAPAAMAAAAQAA4AAAAPAAQAAAARAA4AAAARAAQAAAARAA8AAAAQAAUAAAASAA8AAAARAAUAAAATAA8AAAARAAUAAAATAA4AAAARAAQAAAAUAA8AAAASAAUAAAAUAA4AAAASAAQAAAASAA4AAAARAAQAAAAPAA0AAAAIAAQAAAAPAAsAAAAIAAQAAAAHAA8AAAABAAIAAAAIAA8AAAACAAIAAAAUAAsAAAASAAEAAAAUAAwAAAASAAIAAAA=")
+[node name="moveis" type="TileMapLayer" parent="tilemaps"]
+tile_map_data = PackedByteArray("AAAUAAoAAAASAAEAAAAUAAkAAAASAAEAAAAUAAgAAAASAAAAAAAQAA8AAAAPAAUAAAAQAAoAAAAPAAAAAAAQAAsAAAAPAAMAAAAQAAwAAAAPAAMAAAAQAA0AAAAPAAMAAAAQAA4AAAAPAAQAAAARAA4AAAARAAQAAAARAA8AAAAQAAUAAAASAA8AAAARAAUAAAATAA8AAAARAAUAAAATAA4AAAARAAQAAAAUAA8AAAASAAUAAAAUAA4AAAASAAQAAAASAA4AAAARAAQAAAAPAA0AAAAIAAQAAAAPAAsAAAAIAAQAAAAHAA8AAAABAAIAAAAIAA8AAAACAAIAAAAUAAsAAAASAAEAAAAUAAwAAAASAAIAAAADAAgAAAADAAQAAAAFAAgAAAAAAAMAAAAHAAgAAAAGAAQAAAADAAwAAAADAAQAAAAHAAwAAAAGAAQAAAAFAAwAAAAAAAMAAAALAAcAAAAAAAMAAAAJAAcAAAADAAQAAAANAAcAAAAGAAQAAAAJAAoAAAADAAQAAAALAAoAAAAAAAMAAAANAAoAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_hlm6c")
 
-[node name="cafe" type="TileMapLayer" parent="level"]
+[node name="cafe" type="TileMapLayer" parent="tilemaps"]
 tile_map_data = PackedByteArray("AAAQAAwAAAAAAAAAAAARAA4AAAAEAAAAAAATAA4AAAAAAAEAAAA=")
 tile_set = SubResource("TileSet_3ktwg")
 
-[node name="player" parent="." instance=ExtResource("1_5at1s")]
+[node name="characters" type="Node2D" parent="."]
+
+[node name="player" parent="characters" instance=ExtResource("1_5at1s")]
 position = Vector2(305, 159)
 collision_mask = 15
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D" type="Camera2D" parent="characters/player"]
 position = Vector2(32, -13)
 zoom = Vector2(4, 4)
 
-[node name="gerente" parent="." instance=ExtResource("2_llwa5")]
+[node name="gerente" parent="characters" instance=ExtResource("2_llwa5")]
 position = Vector2(330, 117)
 collision_layer = 2
 
 [node name="cliente_generico_1" parent="." instance=ExtResource("3_rywk3")]
-position = Vector2(127, 200)
+position = Vector2(112, 196)
 collision_layer = 2
 
-[node name="cafeteira" parent="." instance=ExtResource("7_v8ymj")]
+[node name="levels" type="Node2D" parent="."]
+
+[node name="cafeteira" parent="levels" instance=ExtResource("7_v8ymj")]
 position = Vector2(327, 153)
 
-[node name="salaestoque" type="Area2D" parent="."]
+[node name="salaestoque" type="Area2D" parent="levels"]
 unique_name_in_owner = true
-position = Vector2(337, 214)
+position = Vector2(334, 214)
 script = ExtResource("8_ldgye")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="salaestoque"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levels/salaestoque"]
 position = Vector2(-1.5, 2)
 shape = SubResource("RectangleShape2D_vwaqn")
 metadata/_edit_lock_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_0w31j")
-}
+[node name="Marker2D" type="Marker2D" parent="levels/salaestoque"]
 
-[connection signal="body_entered" from="salaestoque" to="salaestoque" method="_on_body_entered"]
-[connection signal="body_exited" from="salaestoque" to="salaestoque" method="_on_body_exited"]
+[connection signal="body_entered" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_entered"]
+[connection signal="body_exited" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_exited"]

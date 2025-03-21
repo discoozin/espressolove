@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var player: CharacterBody2D = $player
 @onready var gotascafe: CPUParticles2D = $gotascafe
 @onready var cafepronto: Sprite2D = $cafepronto
 @onready var texture_rect_1: TextureRect = $TextureRect1
