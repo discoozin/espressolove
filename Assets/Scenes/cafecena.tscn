@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_qi7ed"]
 [ext_resource type="AudioStream" uid="uid://pg46uexi8kca" path="res://Assets/SFX/somcafe.mp3" id="8_1o27a"]
 
-[node name="cenacafe" type="Node2D"]
+[node name="cafecena" type="Node2D"]
 script = ExtResource("1_m41h1")
 
 [node name="background" type="Sprite2D" parent="."]
@@ -37,7 +37,7 @@ show_behind_parent = true
 layout_mode = 0
 offset_right = 81.0
 offset_bottom = 54.0
-mouse_filter = 2
+mouse_filter = 1
 metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -58,7 +58,7 @@ mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="gotascafe" type="CPUParticles2D" parent="."]
-position = Vector2(578, 377)
+position = Vector2(579, 378)
 emitting = false
 amount = 50
 lifetime = 0.37

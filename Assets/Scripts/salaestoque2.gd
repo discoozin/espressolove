@@ -1,4 +1,5 @@
 extends Area2D
+@onready var salaestoque: Area2D = $"."
 
 var entrar = false
 func _on_body_entered(body: CharacterBody2D) -> void:
