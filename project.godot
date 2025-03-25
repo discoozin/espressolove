@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="espressolove"
-run/main_scene="res://Assets/Scenes/main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://4ekvs172ahuu"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,6 +27,7 @@ directories/dch_directory={
 "David": "res://Assets/Character/David.dch",
 "Evander": "res://Assets/Character/Evander.dch",
 "Iris": "res://Assets/Character/Iris.dch",
+"Patrícia": "res://Assets/Character/Patrícia.dch",
 "Senhorinha": "res://Assets/Character/Senhorinha.dch"
 }
 directories/dtl_directory={
