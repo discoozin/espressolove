@@ -1,25 +1,25 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"_translation_id": "",
-"color": Color(1, 1, 1, 1),
-"custom_info": {
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
 "style": "custom_style",
 "suffix": ""
 },
-"default_portrait": "iris padrao",
-"description": "",
-"display_name": "Iris",
-"mirror": false,
-"nicknames": [""],
-"offset": Vector2(50, 0),
-"portraits": {
+&"default_portrait": "iris padrao",
+&"description": "",
+&"display_name": "Íris",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(-150, 0),
+&"portraits": {
 "iris padrao": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/iris/iris idle portraits colorido.png\""
+"image": "\"res://Assets/Sprites/iris/iris.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -27,5 +27,5 @@
 "scene": ""
 }
 },
-"scale": 1.0
+&"scale": 1.0
 }
