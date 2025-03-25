@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://4ekvs172ahuu"]
+
+[ext_resource type="Script" uid="uid://7jmbgxjx0hjh" path="res://Assets/Scenes/menu.gd" id="1_trrmg"]
+[ext_resource type="Shader" uid="uid://bap4vj6ludr0l" path="res://Assets/Scenes/menu.gdshader" id="2_pkw8u"]
+[ext_resource type="Texture2D" uid="uid://cm435e5ewvg5t" path="res://Assets/Scenes/menu/bg.png" id="3_j1b4o"]
+[ext_resource type="Texture2D" uid="uid://hynm3h7uqc6j" path="res://Assets/Scenes/menu/iris menu.png" id="4_fjdk5"]
+[ext_resource type="FontFile" uid="uid://ir24in0hjky5" path="res://Assets/Scenes/menu/Reglisse.otf" id="4_vd8hb"]
+[ext_resource type="Texture2D" uid="uid://27fyc5vifadh" path="res://Assets/Scenes/menu/davi menu.png" id="5_hnoqu"]
+[ext_resource type="Texture2D" uid="uid://dneffqtqhprqk" path="res://Assets/Scenes/menu/version 2.png" id="6_hnoqu"]
+[ext_resource type="PackedScene" uid="uid://wyh28xkemdpq" path="res://Assets/Scenes/fade_transition.tscn" id="7_dkalm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjdk5"]
+shader = ExtResource("2_pkw8u")
+shader_parameter/speed = 0.1
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_trrmg")
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fjdk5")
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1921.0
+offset_bottom = 1084.0
+texture = ExtResource("3_j1b4o")
+
+[node name="button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="jogar" type="Button" parent="button_manager"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 415.0
+offset_top = 250.0
+offset_right = 676.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(1, 0.529412, 1, 1)
+theme_override_fonts/font = ExtResource("4_vd8hb")
+theme_override_font_sizes/font_size = 60
+text = "Jogar"
+flat = true
+
+[node name="créditos" type="Button" parent="button_manager"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 417.0
+offset_top = 369.0
+offset_right = 678.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(1, 0.529412, 1, 1)
+theme_override_fonts/font = ExtResource("4_vd8hb")
+theme_override_font_sizes/font_size = 60
+text = "Créditos"
+flat = true
+
+[node name="sair" type="Button" parent="button_manager"]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 488.0
+offset_right = 679.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(1, 0.529412, 1, 1)
+theme_override_fonts/font = ExtResource("4_vd8hb")
+theme_override_font_sizes/font_size = 60
+text = "Sair"
+flat = true
+
+[node name="IrisMenu" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(209, 302)
+scale = Vector2(0.77775, 0.781286)
+texture = ExtResource("4_fjdk5")
+
+[node name="DaviMenu" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(967, 331)
+scale = Vector2(0.7805, 0.7805)
+texture = ExtResource("5_hnoqu")
+
+[node name="titulo" type="Sprite2D" parent="."]
+position = Vector2(576, 143)
+scale = Vector2(0.176595, 0.176595)
+texture = ExtResource("6_hnoqu")
+
+[node name="fade_transition" parent="." instance=ExtResource("7_dkalm")]
+visible = false
+
+[connection signal="pressed" from="button_manager/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="button_manager/créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="button_manager/sair" to="." method="_on_sair_pressed"]
