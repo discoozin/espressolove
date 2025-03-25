@@ -19,7 +19,7 @@
 &"portraits": {
 "evander-padrao": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/evandro.png\""
+"image": "\"res://Assets/Sprites/evander/evandro.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
