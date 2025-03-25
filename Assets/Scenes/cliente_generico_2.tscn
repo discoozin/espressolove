@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8l5t2kgjpdue"]
+[gd_scene load_steps=10 format=3 uid="uid://lkpu6lhrluyi"]
 
 [ext_resource type="Texture2D" uid="uid://csqanwtqqi6ix" path="res://Assets/Sprites/Senhorinha/idle/SENHORINHA (IDLE) - frente.png" id="1_ckuuf"]
 [ext_resource type="Script" path="res://Assets/Scripts/cliente_generico_2.gd" id="1_f64tu"]

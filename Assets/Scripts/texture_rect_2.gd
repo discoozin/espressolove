@@ -15,10 +15,9 @@ func _process(delta: float) -> void:
 		Dialogic.VAR.set("animcafe", 0)
 		somcafe.play()
 func _can_drop_data(_pos, data):
-	return data is Texture2D
-
+	return true
 func _drop_data(_pos, data):
 	Dialogic.start("montar_pedidos")
-	texture=data
-	panel_1.queue_free()
-	panel_2.visible=false
+	data[0].get_parent().remove_child(data[0])
+	add_child(data[0])
+	data[0].global_position=global_position
