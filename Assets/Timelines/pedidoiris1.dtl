@@ -1,4 +1,22 @@
-if :
-else:
+if {fezpedido?} == 1:
+	Iris: Olá, ainda não vou fazer meu pedido, estou terminando um trabalho.
+if {ordempedido} == 8:
+	join David right
+	David: Bom di-
+	David: !!!
+	David: (É a mesma garota que vi quando vim fazer a entrevista!)
 	join Iris left
-	Iris: Oii, não vou pedir ainda, estou terminando um trabalho. Daqui a pouco eu te chamo, obrigada.
+	Iris: ???
+	David: Bom dia, como posso ajudá-la?
+	Iris: Vou querer o de sempre, por gentileza.
+	David: desculpa moça, sou novo aqui.
+	leave Iris
+	join Patricia-pb left
+	Patrícia: Ela sempre pede um Cappuccino Gelado Duplo.
+	leave Patrícia
+	David: Ah, só um minuto moça.
+	leave --All--
+	set {qualcafe} = 1
+if {cappucino} == 1:
+if {expresso} == 1:
+	if {} == "":

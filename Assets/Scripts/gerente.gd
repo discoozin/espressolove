@@ -24,11 +24,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 #TU SABE OQ O _PROCESS FAZ NÉ?
 func _process(delta: float) -> void:
-	muda_dialogo = Dialogic.VAR.get("mudatextger")
 	ordem = Dialogic.VAR.get("ordempedido")
+	change_dialogue()
 	
-	if muda_dialogo == 1:
-		dialogo = "evander2"
 	#o if verifica se a tecla E ta sendo pressionada e se o interativo é verdadeiro, se sim
 	#ele executa o Dialogic, acho que da pra fazer o player parar de andar com isso aqui, mas não sei dizer
 	if Input.is_action_just_pressed("interact") and interativo == true:
@@ -37,3 +35,12 @@ func _process(delta: float) -> void:
 		$exclamacao2.visible = true
 	else:
 		$exclamacao2.visible = false
+		
+	
+func change_dialogue():
+	muda_dialogo = Dialogic.VAR.get("mudatextger")
+	
+	if muda_dialogo == 1:
+		dialogo = "evander2"
+	if muda_dialogo == 2:
+		dialogo = "evander3"

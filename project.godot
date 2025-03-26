@@ -37,11 +37,13 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "evander2": "res://Assets/Timelines/evander2.dtl",
+"evander3": "res://Assets/Timelines/evander3.dtl",
 "montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
 "patricia1": "res://Assets/Timelines/patricia1.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
 "pedido2": "res://Assets/Character/pedido2.dtl",
 "pedidoiris1": "res://Assets/Timelines/pedidoiris1.dtl",
+"testes": "res://testes.dtl",
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
 }
 variables={
@@ -51,6 +53,7 @@ variables={
 "cappucino": 0.0,
 "cont_pedido": 0.0,
 "expresso": 0.0,
+"fezpedido?": 0.0,
 "mudatextger": 0.0,
 "ordempedido": 0.0,
 "podeandar": false,

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b2rkfce0q70bh"]
+[gd_scene load_steps=22 format=4 uid="uid://b2rkfce0q70bh"]
 
 [ext_resource type="PackedScene" uid="uid://b8fosplnjvvb2" path="res://Assets/Scenes/player.tscn" id="1_5at1s"]
 [ext_resource type="Texture2D" uid="uid://d3dlfo5e8phf0" path="res://Assets/Tilemap/terreno.png" id="1_17m6b"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://baqoeulcx21kj" path="res://Assets/Scenes/cafeteira.tscn" id="7_v8ymj"]
 [ext_resource type="Script" path="res://Assets/Scripts/portaestoque.gd" id="8_ldgye"]
 [ext_resource type="PackedScene" uid="uid://lkpu6lhrluyi" path="res://Assets/Scenes/cliente_generico_2.tscn" id="9_cyc5t"]
+[ext_resource type="Texture2D" uid="uid://dn3nvf8odgihj" path="res://Assets/Timelines/WhatsApp Image 2025-02-20 at 10.31.12.jpeg" id="13_gv57v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eukkx"]
 texture = ExtResource("1_17m6b")
@@ -139,6 +140,9 @@ sources/0 = SubResource("TileSetAtlasSource_yvknw")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwaqn"]
 size = Vector2(9, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc853"]
+size = Vector2(301.936, 576.428)
+
 [node name="main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_inq2a")
@@ -210,5 +214,18 @@ collision_layer = 2
 position = Vector2(160, 116)
 dialogo = "pedido2"
 
+[node name="WhatsAppImage2025-02-20At10_31_12" type="Sprite2D" parent="."]
+position = Vector2(223, 239)
+scale = Vector2(0.0430556, 0.021875)
+texture = ExtResource("13_gv57v")
+
+[node name="Area2D" type="Area2D" parent="WhatsAppImage2025-02-20At10_31_12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhatsAppImage2025-02-20At10_31_12/Area2D"]
+position = Vector2(139.355, 45.7143)
+shape = SubResource("RectangleShape2D_rc853")
+debug_color = Color(0.836074, 0.242975, 0.751388, 0.42)
+
 [connection signal="body_entered" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_entered"]
 [connection signal="body_exited" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_exited"]
+[connection signal="body_entered" from="WhatsAppImage2025-02-20At10_31_12/Area2D" to="." method="_on_area_2d_body_entered"]

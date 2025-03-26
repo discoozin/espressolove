@@ -1,0 +1,4 @@
+- Pedido Velha
+	set {ordempedido} = 6
+	set {fezpedido?} = 1
+- Pedido Iris

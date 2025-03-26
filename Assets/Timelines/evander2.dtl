@@ -16,3 +16,5 @@ if {ordempedido} == 5:
 	David: Tá bem, vou dar o meu melhor.
 	leave --All--
 	set {ordempedido} = 6
+	set {fezpedido?} = 1
+	set {mudatextger} = 2
