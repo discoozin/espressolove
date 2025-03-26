@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="espressolove"
-run/main_scene="uid://4ekvs172ahuu"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://Assets/Scenes/menu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,14 +25,20 @@ Global="*res://global.gd"
 directories/dch_directory={
 "Bernardo": "res://Assets/Character/Bernardo.dch",
 "David": "res://Assets/Character/David.dch",
+"David-Colorido": "res://Assets/Character/David-Colorido.dch",
 "Evander": "res://Assets/Character/Evander.dch",
+"Evander-Colorido": "res://Assets/Character/Evander-Colorido.dch",
 "Iris": "res://Assets/Character/Iris.dch",
+"Iris-Colorido": "res://Assets/Character/Iris-Colorido.dch",
+"Patricia-pb": "res://Assets/Character/Patricia-pb.dch",
 "Patrícia": "res://Assets/Character/Patrícia.dch",
-"Senhorinha": "res://Assets/Character/Senhorinha.dch"
+"Senhorinha": "res://Assets/Character/Senhorinha.dch",
+"patricia-colorido": "res://Assets/Character/patricia-colorido.dch"
 }
 directories/dtl_directory={
 "evander2": "res://Assets/Timelines/evander2.dtl",
 "montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
+"patricia1": "res://Assets/Timelines/patricia1.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
 "pedido2": "res://Assets/Character/pedido2.dtl",
 "pedidoiris1": "res://Assets/Timelines/pedidoiris1.dtl",

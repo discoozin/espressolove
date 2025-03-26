@@ -37,5 +37,3 @@ func _process(delta: float) -> void:
 		$exclamacao2.visible = true
 	else:
 		$exclamacao2.visible = false
-	if ordem == 6:
-		get_tree().change_scene_to_file("res://Assets/Scenes/caboplaytest.tscn")

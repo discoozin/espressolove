@@ -1,0 +1,8 @@
+if {ordempedido} >= 6:
+	join Patricia-pb left
+	Patrícia: Oi David, precisa de alguma coisa?
+	- Por enquanto não.
+		Patrícia: Okayy, quando precisares de algo, só me chamar.
+else:
+	join Patricia-pb left
+	Patrícia: Estou ocupada agora, fale com o gerente se precisar de algo

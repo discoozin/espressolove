@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwp0ftlovlykf"
-path="res://.godot/imported/david idle portraits colorido.png-a02a84a35189d04b4bb30c0dc4c17a7c.ctex"
+uid="uid://bpqb753inqm25"
+path="res://.godot/imported/patricia pb idle.png-acf7657f181ff91b87ea56a3152e0e5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/menu/david idle portraits colorido.png"
-dest_files=["res://.godot/imported/david idle portraits colorido.png-a02a84a35189d04b4bb30c0dc4c17a7c.ctex"]
+source_file="res://Assets/Sprites/patricia/patricia pb idle.png"
+dest_files=["res://.godot/imported/patricia pb idle.png-acf7657f181ff91b87ea56a3152e0e5a.ctex"]
 
 [params]
 

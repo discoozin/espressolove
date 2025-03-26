@@ -1,6 +1,18 @@
 # ORDEM 5
 if {ordempedido} == 5:
+	join Evander left
+	join David right
 	Evander: Ótimo trabalho, pelo visto o cliente ficou bem satisfeito com o café que você preparou.
 	Evander: Você está se saindo muito bem. Se continuar fazendo um bom trabalho, vou te contratar por tempo integral.
+	Evander: Ah garoto, vou te apresentar a sua colega de trabalho, o nome dela é Patrícia.
+	leave Evander
+	join Patricia-pb left
+	Patrícia: Meu nome é Patrícia, é um prazer te conhecer.
+	Patrícia: Qualquer dúvida que você tiver, pode me chamar para te ajudar
+	David: É um prazer te conhecer, meu nome é David.
+	David: Estarei sob seus cuidados.
+	Patrícia: Depois continuamos a nossa conversa, aquela senhorinha quer fazer um pedido.
+	Patrícia: Vou deixar você dar conta desse.
+	David: Tá bem, vou dar o meu melhor.
+	leave --All--
 	set {ordempedido} = 6
-	# Finaliza o playtest

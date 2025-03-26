@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwp0ftlovlykf"
-path="res://.godot/imported/david idle portraits colorido.png-a02a84a35189d04b4bb30c0dc4c17a7c.ctex"
+uid="uid://cjourgcwsb8k1"
+path="res://.godot/imported/evander pb.png-e6e45b9d71455e406597b7b3a5a62917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/menu/david idle portraits colorido.png"
-dest_files=["res://.godot/imported/david idle portraits colorido.png-a02a84a35189d04b4bb30c0dc4c17a7c.ctex"]
+source_file="res://Assets/Sprites/evander/evander pb.png"
+dest_files=["res://.godot/imported/evander pb.png-e6e45b9d71455e406597b7b3a5a62917.ctex"]
 
 [params]
 

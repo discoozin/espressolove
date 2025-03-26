@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://4ekvs172ahuu"]
 
-[ext_resource type="Script" uid="uid://7jmbgxjx0hjh" path="res://Assets/Scenes/menu.gd" id="1_trrmg"]
-[ext_resource type="Shader" uid="uid://bap4vj6ludr0l" path="res://Assets/Scenes/menu.gdshader" id="2_pkw8u"]
-[ext_resource type="Texture2D" uid="uid://cm435e5ewvg5t" path="res://Assets/Scenes/menu/bg.png" id="3_j1b4o"]
-[ext_resource type="Texture2D" uid="uid://hynm3h7uqc6j" path="res://Assets/Scenes/menu/iris menu.png" id="4_fjdk5"]
-[ext_resource type="FontFile" uid="uid://ir24in0hjky5" path="res://Assets/Scenes/menu/Reglisse.otf" id="4_vd8hb"]
-[ext_resource type="Texture2D" uid="uid://27fyc5vifadh" path="res://Assets/Scenes/menu/davi menu.png" id="5_hnoqu"]
-[ext_resource type="Texture2D" uid="uid://dneffqtqhprqk" path="res://Assets/Scenes/menu/version 2.png" id="6_hnoqu"]
+[ext_resource type="Script" path="res://Assets/Scenes/menu.gd" id="1_trrmg"]
+[ext_resource type="Shader" path="res://Assets/Scenes/menu.gdshader" id="2_pkw8u"]
+[ext_resource type="Texture2D" uid="uid://cm435e5ewvg5t" path="res://Assets/Sprites/menu/bg.png" id="3_j1b4o"]
+[ext_resource type="Texture2D" uid="uid://hynm3h7uqc6j" path="res://Assets/Sprites/menu/iris menu.png" id="4_fjdk5"]
+[ext_resource type="FontFile" uid="uid://ir24in0hjky5" path="res://Assets/Sprites/menu/Reglisse.otf" id="4_vd8hb"]
+[ext_resource type="Texture2D" uid="uid://27fyc5vifadh" path="res://Assets/Sprites/menu/davi menu.png" id="5_hnoqu"]
+[ext_resource type="Texture2D" uid="uid://dneffqtqhprqk" path="res://Assets/Sprites/menu/version 2.png" id="6_hnoqu"]
 [ext_resource type="PackedScene" uid="uid://wyh28xkemdpq" path="res://Assets/Scenes/fade_transition.tscn" id="7_dkalm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fjdk5"]
@@ -20,10 +20,10 @@ script = ExtResource("1_trrmg")
 texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_fjdk5")
-offset_left = 1.0
-offset_top = 4.0
-offset_right = 1921.0
-offset_bottom = 1084.0
+offset_left = -327.0
+offset_top = -173.0
+offset_right = 1593.0
+offset_bottom = 907.0
 texture = ExtResource("3_j1b4o")
 
 [node name="button_manager" type="Control" parent="."]

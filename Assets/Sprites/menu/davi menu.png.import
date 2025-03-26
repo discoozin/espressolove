@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://27fyc5vifadh"
-path="res://.godot/imported/davi menu.png-ba4567e7113de7c432a416c1f9f54720.ctex"
+path="res://.godot/imported/davi menu.png-0c4ef963eebd676d10b9d97b066cbee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scenes/menu/davi menu.png"
-dest_files=["res://.godot/imported/davi menu.png-ba4567e7113de7c432a416c1f9f54720.ctex"]
+source_file="res://Assets/Sprites/menu/davi menu.png"
+dest_files=["res://.godot/imported/davi menu.png-0c4ef963eebd676d10b9d97b066cbee8.ctex"]
 
 [params]
 

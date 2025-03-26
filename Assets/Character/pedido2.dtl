@@ -1,1 +1,22 @@
-Senhorinha: Oii, por enquanto não tem pedido aqui. obrigado por jogar nosso PlayTest
+if {ordempedido} == 6:
+	Senhorinha: Boa tarde, jovem. Vocês vendem chá?
+	join David right
+	David: Bom dia senhora, seja bem-vinda ao Esmeralda Café. Não vendemos chá infelizmente.
+	Senhorinha: Ah que pena, eu só bebo coisas fracas… e sem açúcar.
+	- Temos a opção perfeita para a senhora! Porque não experimenta o nosso café com leite?
+		Senhorinha: Vou pedir um desse então meu querido. Obrigada.
+	- Isso não vai ser um problema. Porque não prova o nosso delicioso café com leite?
+		Senhorinha: Vou escolher essa opção então meu querido.
+	David: Certinho, senhora, só um segundo e seu café com leite já vai estar saindo.
+	set {qualcafe} = 2
+if {cafeleite} == 1:
+	Senhorinha: Obrigada meu bem, esse sabor me recorda dos tempos antigos. Tenha um bom dia.
+	set {cafeleite} = 0
+elif {cappucino} == 1:
+	Senhorinha: Eu não me lembro de ter pedido por isso. Eu pedi um café com leite.
+	set {cappucino} = 0
+elif {expresso} == 1:
+	Senhorinha: Eu não me lembro de ter pedido por isso. Eu pedi um café com leite.
+	set {expresso} = 0
+elif {ordempedido} < 6:
+	Senhorinha: Obrigada, mas por enquanto não vou pedir. Estou escolhendo ainda.

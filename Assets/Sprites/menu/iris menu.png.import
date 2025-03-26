@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hynm3h7uqc6j"
-path="res://.godot/imported/iris menu.png-2d5938c22e11b3358ef073d7bfc1882a.ctex"
+path="res://.godot/imported/iris menu.png-6fd5e3484719fe2edfd1b57bb04ef76b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scenes/menu/iris menu.png"
-dest_files=["res://.godot/imported/iris menu.png-2d5938c22e11b3358ef073d7bfc1882a.ctex"]
+source_file="res://Assets/Sprites/menu/iris menu.png"
+dest_files=["res://.godot/imported/iris menu.png-6fd5e3484719fe2edfd1b57bb04ef76b.ctex"]
 
 [params]
 

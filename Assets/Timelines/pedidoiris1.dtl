@@ -1,1 +1,4 @@
-Iris: Oii, por enquanto não tem pedido aqui. obrigado por jogar nosso PlayTest
+if :
+else:
+	join Iris left
+	Iris: Oii, não vou pedir ainda, estou terminando um trabalho. Daqui a pouco eu te chamo, obrigada.

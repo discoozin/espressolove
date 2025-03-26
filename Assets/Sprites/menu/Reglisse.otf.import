@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ir24in0hjky5"
-path="res://.godot/imported/Reglisse.otf-dd83e752d2cd2f4afa0608eb84b171cd.fontdata"
+path="res://.godot/imported/Reglisse.otf-aa320bb3bfec18757edb8491423784e7.fontdata"
 
 [deps]
 
-source_file="res://Assets/Scenes/menu/Reglisse.otf"
-dest_files=["res://.godot/imported/Reglisse.otf-dd83e752d2cd2f4afa0608eb84b171cd.fontdata"]
+source_file="res://Assets/Sprites/menu/Reglisse.otf"
+dest_files=["res://.godot/imported/Reglisse.otf-aa320bb3bfec18757edb8491423784e7.fontdata"]
 
 [params]
 
@@ -23,7 +23,6 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=4
-keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

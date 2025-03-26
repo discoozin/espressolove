@@ -7,15 +7,25 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "style_dialogic",
+"style": "",
 "suffix": ""
 },
-"default_portrait": "",
+"default_portrait": "iris",
 "description": "",
-"display_name": "Bernardo",
+"display_name": "Iris-Colorido",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {},
+"portraits": {
+"iris": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/iris.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 "scale": 1.0
 }

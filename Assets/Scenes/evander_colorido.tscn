@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://c3pfa6p315stf"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/evander_colorido.gd" id="1_41sbd"]
+[ext_resource type="Texture2D" uid="uid://c4gg3c7pksvvr" path="res://Assets/Sprites/evander/evander colorido.png" id="1_gp8pt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axv4c"]
+size = Vector2(20, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6ilx"]
+atlas = ExtResource("1_gp8pt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq7pt"]
+atlas = ExtResource("1_gp8pt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6c87"]
+atlas = ExtResource("1_gp8pt")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3da7"]
+atlas = ExtResource("1_gp8pt")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paeih"]
+atlas = ExtResource("1_gp8pt")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d1nt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6ilx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq7pt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6c87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3da7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paeih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs84e"]
+size = Vector2(24, 26)
+
+[node name="evander_colorido" type="CharacterBody2D"]
+script = ExtResource("1_41sbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_axv4c")
+debug_color = Color(0.627551, 0.530932, 1.92523e-07, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d1nt0")
+autoplay = "default"
+frame_progress = 0.543981
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_cs84e")
+debug_color = Color(0.971836, 0, 0.445219, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

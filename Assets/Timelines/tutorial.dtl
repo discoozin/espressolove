@@ -16,7 +16,7 @@ if {tutorial} == 0:
 # ORDEM2
 elif {tutorial} == 2:
 	set {podeandar} = true
-	join Evander center
+	join Evander left
 	Evander: O Cliente está pedindo um "Expresso Simples" vou te mostrar como faz
 	Evander: Interaja com a cafeteira apertando "E", pegue a xícara e coloque na cafeteira.
 	leave Evander

@@ -1,10 +1,11 @@
-[gd_scene load_steps=112 format=4 uid="uid://cagxpwsmrojgt"]
+[gd_scene load_steps=114 format=4 uid="uid://cagxpwsmrojgt"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/mundocolorido.gd" id="1_85l0p"]
 [ext_resource type="Texture2D" uid="uid://bc8xnyxq6gh2x" path="res://Assets/Tilemap/terreno-colorido.png" id="1_dchi0"]
 [ext_resource type="Texture2D" uid="uid://bxv0uxcuacvrh" path="res://Assets/Tilemap/moveiscolorido.png" id="2_w2eiy"]
 [ext_resource type="Texture2D" uid="uid://b3fflvljayxt1" path="res://Assets/Tilemap/cafescolorido.png" id="3_8oj3n"]
 [ext_resource type="Script" path="res://Assets/Scenes/playercolorido.gd" id="5_ceoss"]
+[ext_resource type="PackedScene" uid="uid://diclwxg8s651q" path="res://Assets/Scenes/iris_colorida.tscn" id="5_tx7f2"]
 [ext_resource type="Texture2D" uid="uid://bpdd5qav6bfjv" path="res://Assets/Sprites/david/walk/DAVID (WALK) - frente.png" id="6_qqoiw"]
 [ext_resource type="Texture2D" uid="uid://dmmqjbfs3qo36" path="res://Assets/Sprites/david/DAVID (IDLE) - frente.png" id="7_lucql"]
 [ext_resource type="Texture2D" uid="uid://dsltqy7y1y5vk" path="res://Assets/Sprites/david/walk/DAVID (WALK) - direita.png" id="8_sd6aj"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ck18pv2cjlrpe" path="res://Assets/Sprites/david/semana 3/idle/DAVI (IDLE) - frente.png" id="11_eb0ve"]
 [ext_resource type="Texture2D" uid="uid://6lylxxhgspd5" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - direita.png" id="12_ocjv4"]
 [ext_resource type="Texture2D" uid="uid://bisf5rf6xp7kv" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - costas.png" id="13_ws30l"]
+[ext_resource type="PackedScene" uid="uid://c3pfa6p315stf" path="res://Assets/Scenes/evander_colorido.tscn" id="15_svod2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htxvn"]
 texture = ExtResource("1_dchi0")
@@ -835,7 +837,7 @@ tile_map_data = PackedByteArray("AAARAAIAAAACAAAAAAANAAUAAAAAAAAAAAAQAAcAAAAAAAE
 tile_set = SubResource("TileSet_n6lrs")
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(80, 128)
+position = Vector2(263, 45)
 motion_mode = 1
 script = ExtResource("5_ceoss")
 movement_speed = 125.0
@@ -852,5 +854,15 @@ autoplay = "rgbidle"
 frame_progress = 0.0907198
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(32, -13)
+position = Vector2(-1, 3)
 zoom = Vector2(4, 4)
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="iris_colorida" parent="NPCs" instance=ExtResource("5_tx7f2")]
+position = Vector2(17, 21)
+
+[node name="evander_colorido" parent="NPCs" instance=ExtResource("15_svod2")]
+position = Vector2(111, 130)
+
+[node name="Animações" type="Node" parent="."]
