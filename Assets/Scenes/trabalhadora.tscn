@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://t7kfm0b1iew5"]
+
+[ext_resource type="Texture2D" uid="uid://bklbk6d23w8xo" path="res://Assets/Sprites/Trabalhadora/idle/TRABALHADORA (IDLE) - frente.png" id="1_y0cwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvxiw"]
+size = Vector2(20, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hct2w"]
+atlas = ExtResource("1_y0cwq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6omx"]
+atlas = ExtResource("1_y0cwq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfsp2"]
+atlas = ExtResource("1_y0cwq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpn0f"]
+atlas = ExtResource("1_y0cwq")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8tgs"]
+atlas = ExtResource("1_y0cwq")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cs4v4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hct2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6omx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfsp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpn0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8tgs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pko3d"]
+size = Vector2(25, 27)
+
+[node name="Trabalhadora" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_nvxiw")
+debug_color = Color(0.73273, 0.267575, 0.954362, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cs4v4")
+autoplay = "default"
+frame_progress = 0.376455
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_pko3d")
+debug_color = Color(0.301753, 0.502405, 0.979472, 0.42)

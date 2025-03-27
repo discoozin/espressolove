@@ -5,7 +5,6 @@
 	set {animcafe} = 1
 	set {cappucino} = 0
 	set {cafeleite} = 0
-	set {ordempedido} = 4
 - Capuccino
 	set {ordempedido} = 4
 	set {cappucino} = 1

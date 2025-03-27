@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=4 uid="uid://cagxpwsmrojgt"]
+[gd_scene load_steps=116 format=4 uid="uid://cagxpwsmrojgt"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/mundocolorido.gd" id="1_85l0p"]
 [ext_resource type="Texture2D" uid="uid://bc8xnyxq6gh2x" path="res://Assets/Tilemap/terreno-colorido.png" id="1_dchi0"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://6lylxxhgspd5" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - direita.png" id="12_ocjv4"]
 [ext_resource type="Texture2D" uid="uid://bisf5rf6xp7kv" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - costas.png" id="13_ws30l"]
 [ext_resource type="PackedScene" uid="uid://c3pfa6p315stf" path="res://Assets/Scenes/evander_colorido.tscn" id="15_svod2"]
+[ext_resource type="PackedScene" uid="uid://t7kfm0b1iew5" path="res://Assets/Scenes/trabalhadora.tscn" id="16_7tdpa"]
+[ext_resource type="PackedScene" uid="uid://gkhrt5m14f6a" path="res://Assets/Scenes/policia.tscn" id="17_0u77k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htxvn"]
 texture = ExtResource("1_dchi0")
@@ -848,6 +850,7 @@ shape = SubResource("RectangleShape2D_r2dbj")
 
 [node name="sprite" type="AnimatedSprite2D" parent="player" groups=["player"]]
 unique_name_in_owner = true
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_sxyg3")
 animation = &"rgbside"
 autoplay = "rgbidle"
@@ -863,6 +866,13 @@ zoom = Vector2(4, 4)
 position = Vector2(17, 21)
 
 [node name="evander_colorido" parent="NPCs" instance=ExtResource("15_svod2")]
-position = Vector2(111, 130)
+position = Vector2(179, 127)
+dialogo = "dialogo"
+
+[node name="Trabalhadora" parent="NPCs" instance=ExtResource("16_7tdpa")]
+position = Vector2(112, 54)
+
+[node name="policia" parent="NPCs" instance=ExtResource("17_0u77k")]
+position = Vector2(14, 86)
 
 [node name="Animações" type="Node" parent="."]

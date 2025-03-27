@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b2rkfce0q70bh"]
+[gd_scene load_steps=25 format=4 uid="uid://b2rkfce0q70bh"]
 
 [ext_resource type="PackedScene" uid="uid://b8fosplnjvvb2" path="res://Assets/Scenes/player.tscn" id="1_5at1s"]
 [ext_resource type="Texture2D" uid="uid://d3dlfo5e8phf0" path="res://Assets/Tilemap/terreno.png" id="1_17m6b"]
@@ -142,6 +142,120 @@ size = Vector2(9, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sklqy"]
 size = Vector2(24, 5)
 
+[sub_resource type="Animation" id="Animation_0iicu"]
+resource_name = "cliente1_saindo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc/cliente_generico_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(112, 196), Vector2(129, 222), Vector2(128, 247), Vector2(129, 277), Vector2(129, 323)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("npc/cliente_generico_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2cygj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc/cliente_generico_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(112, 196)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("npc/cliente_generico_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("npc/cliente_generico_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(160, 116)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("npc/cliente_generico_2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_id11l"]
+resource_name = "cliente2_saindo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("npc/cliente_generico_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 1.96667, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(160, 116), Vector2(134, 149), Vector2(137, 195), Vector2(132, 226), Vector2(128, 246), Vector2(135, 280), Vector2(157, 341)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("npc/cliente_generico_2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5ccx"]
+_data = {
+"RESET": SubResource("Animation_2cygj"),
+"cliente1_saindo": SubResource("Animation_0iicu"),
+"cliente2_saindo": SubResource("Animation_id11l")
+}
+
 [node name="main" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_inq2a")
@@ -220,6 +334,11 @@ position = Vector2(128, 248)
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_sklqy")
 debug_color = Color(1, 0.589566, 0.340189, 0.419608)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l5ccx")
+}
 
 [connection signal="body_entered" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_entered"]
 [connection signal="body_exited" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_exited"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://gkhrt5m14f6a"]
+
+[ext_resource type="Texture2D" uid="uid://bhpe7phu3edi" path="res://Assets/Sprites/Policia/idle/POLICIAL (IDLE) - frente.png" id="1_aum6k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8udwn"]
+atlas = ExtResource("1_aum6k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38kfg"]
+atlas = ExtResource("1_aum6k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7i4h"]
+atlas = ExtResource("1_aum6k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht53w"]
+atlas = ExtResource("1_aum6k")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7px62"]
+atlas = ExtResource("1_aum6k")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_br313"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8udwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38kfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7i4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht53w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7px62")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rx062"]
+size = Vector2(20, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77ywh"]
+size = Vector2(24, 27)
+
+[node name="policia" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_br313")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_rx062")
+debug_color = Color(0.89532, 0.000207732, 0.778515, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_77ywh")

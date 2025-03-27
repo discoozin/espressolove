@@ -38,6 +38,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "evander2": "res://Assets/Timelines/evander2.dtl",
 "evander3": "res://Assets/Timelines/evander3.dtl",
+"evander4": "res://Assets/Timelines/evander4.dtl",
 "montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
 "patricia1": "res://Assets/Timelines/patricia1.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
@@ -48,7 +49,6 @@ directories/dtl_directory={
 }
 variables={
 "animcafe": 0.0,
-"animnpc": 0.0,
 "cafeleite": 0.0,
 "cappucino": 0.0,
 "cont_pedido": 0.0,

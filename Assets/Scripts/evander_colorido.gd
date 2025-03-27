@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var dialogo: String
+@export var dialogo: String = "evander4"
 
 var interativo = false
 
@@ -14,3 +14,13 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
+	
+	change_dialogue()
+		
+func change_dialogue():
+	var muda_dialogo = Dialogic.VAR.get("mudatextger")
+	
+	if muda_dialogo == 3:
+		dialogo = "evander4"
+	if muda_dialogo == 4:
+		pass
