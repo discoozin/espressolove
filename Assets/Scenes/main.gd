@@ -1,14 +1,10 @@
 extends Node2D
 
+var ordem
 
-func _ready() -> void:
-	if Input.is_action_just_pressed("trocarmundo"):
-		get_tree().change_scene_to_file("res://Assets/Scenes/mundocolorido.tscn")
-	
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("trocarmundo"):
-		get_tree().change_scene_to_file("res://Assets/Scenes/mundocolorido.tscn")
-
+	ordem = Dialogic.VAR.get("ordempedido")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	Dialogic.start("testes")
+	if body.is_in_group("player") and ordem == 10:
+		get_tree().change_scene_to_file("res://Assets/Scenes/mundocolorido.tscn")

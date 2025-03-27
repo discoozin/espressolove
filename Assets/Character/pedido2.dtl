@@ -18,6 +18,7 @@ if {cafeleite} == 1:
 	Senhorinha: Obrigada meu bem, esse sabor me recorda dos tempos antigos. Tenha um bom dia.
 	set {cafeleite} = 0
 	set {ordempedido} = 7
+	set {cont_pedido} = 0
 	
 	# #ERROU
 if {expresso} == 1:

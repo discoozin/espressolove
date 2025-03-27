@@ -3,7 +3,7 @@ if {ordempedido} == 7:
 	Evander: Agora vou te deixar trabalhando, qualquer coisa pode falar comigo ou com a Patrícia.
 	join David center
 	David: Obrigada senhor.
-	join Evander left
+	leave Evander
 	David: (Não foi tão ruim quanto eu imaginei que seria.)
 	set {fezpedido?} = 2
 	set {ordempedido} = 8

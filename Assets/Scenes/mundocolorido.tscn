@@ -837,7 +837,7 @@ tile_map_data = PackedByteArray("AAARAAIAAAACAAAAAAANAAUAAAAAAAAAAAAQAAcAAAAAAAE
 tile_set = SubResource("TileSet_n6lrs")
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(263, 45)
+position = Vector2(80, 128)
 motion_mode = 1
 script = ExtResource("5_ceoss")
 movement_speed = 125.0

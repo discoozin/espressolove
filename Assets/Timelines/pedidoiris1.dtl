@@ -14,9 +14,17 @@ if {ordempedido} == 8:
 	join Patricia-pb left
 	Patrícia: Ela sempre pede um Cappuccino Gelado Duplo.
 	leave Patrícia
+	join Iris left
 	David: Ah, só um minuto moça.
 	leave --All--
 	set {qualcafe} = 1
 if {cappucino} == 1:
-if {expresso} == 1:
-	if {} == "":
+	join David right
+	David: Aqui está o seu pedido.
+	David: Eu sou novo aqui, então me desculpe por qualquer coisa.
+	join Iris left
+	Iris: Eu que devo pedir desculpa! Eu não tinha reparado que tinha um funcionário novo aqui.
+	Iris: Muito obrigada pelo café, até mais.
+	David: Volte sempre.
+	leave --All--
+	set {ordempedido} = 9

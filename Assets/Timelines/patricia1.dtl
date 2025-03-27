@@ -1,8 +1,21 @@
-if {ordempedido} >= 6:
-	join Patricia-pb left
-	Patrícia: Oi David, precisa de alguma coisa?
-	- Por enquanto não.
-		Patrícia: Okayy, quando precisares de algo, só me chamar.
-else:
+if {ordempedido} <= 8:
+	if {ordempedido} >= 6:
+		join Patricia-pb left
+		Patrícia: Oi David, precisa de alguma coisa?
+		- Por enquanto não.
+			Patrícia: Okayy, quando precisares de algo, só me chamar.
+elif {ordempedido} <= 6:
 	join Patricia-pb left
 	Patrícia: Estou ocupada agora, fale com o gerente se precisar de algo
+if {ordempedido} == 9:
+	join David right
+	David: Quem é aquela garota? E por que vocês fizeram o pedido dela, sendo que não tem no cardápio?
+	join Patricia-pb left
+	Patrícia: O nome dela é Íris. Já faz uns meses que ela vem aqui todos os dias, então abrimos uma exceção para ela.
+	Patrícia: Mas não sei porque ela pede uma bebida gelada em uma cidade fria como a nossa.
+	leave Patricia-pb
+	David: (O gosto dela é bem peculiar, ela parece ser uma garota estranha.)
+	join Patricia-pb left
+	Patrícia: Quase esqueci, David. Você já pode finalizar o seu expediente.
+	leave --All--
+	set {ordempedido} = 10
