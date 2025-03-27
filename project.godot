@@ -13,7 +13,7 @@ config_version=5
 config/name="espressolove"
 run/main_scene="res://Assets/Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://logoespressolove.png"
 
 [autoload]
 
