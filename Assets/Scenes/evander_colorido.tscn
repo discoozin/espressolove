@@ -72,7 +72,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="evander_colorido" type="CharacterBody2D"]
@@ -98,6 +98,9 @@ debug_color = Color(0.971836, 0, 0.445219, 0.42)
 [node name="exclamacao99" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -19)
 sprite_frames = SubResource("SpriteFrames_4vgjv")
+autoplay = "default"
+frame = 1
+frame_progress = 0.83679
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

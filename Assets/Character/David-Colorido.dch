@@ -10,16 +10,61 @@
 "style": "style_dialogic",
 "suffix": ""
 },
-"default_portrait": "colorido",
+"default_portrait": "neutro",
 "description": "",
 "display_name": "David",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"colorido": {
+"feliz": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/david/davi.png\""
+"image": "\"res://Assets/Sprites/david/talksprite/davi alegre.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"feliz_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/davi alegre fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervoso": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/davi nervoso.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervoso_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/davi nervoso falando.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/davi neutro.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/davi neutro fala.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

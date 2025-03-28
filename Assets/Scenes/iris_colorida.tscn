@@ -86,6 +86,7 @@ debug_color = Color(0.823641, 0.219989, 0.820499, 0.42)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_icid6")
 autoplay = "default"
+frame_progress = 0.134852
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -97,6 +98,7 @@ debug_color = Color(0.799993, 0.631193, 7.70092e-07, 0.42)
 [node name="exclamacao9" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -20)
 sprite_frames = SubResource("SpriteFrames_qewl2")
+autoplay = "default"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

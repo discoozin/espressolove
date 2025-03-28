@@ -1,7 +1,8 @@
-[gd_scene load_steps=117 format=4 uid="uid://cagxpwsmrojgt"]
+[gd_scene load_steps=126 format=4 uid="uid://cagxpwsmrojgt"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/mundocolorido.gd" id="1_85l0p"]
 [ext_resource type="Texture2D" uid="uid://bc8xnyxq6gh2x" path="res://Assets/Tilemap/terreno-colorido.png" id="1_dchi0"]
+[ext_resource type="PackedScene" uid="uid://wyh28xkemdpq" path="res://Assets/Scenes/fade_transition.tscn" id="2_q5vvi"]
 [ext_resource type="Texture2D" uid="uid://bxv0uxcuacvrh" path="res://Assets/Tilemap/moveiscolorido.png" id="2_w2eiy"]
 [ext_resource type="Texture2D" uid="uid://b3fflvljayxt1" path="res://Assets/Tilemap/cafescolorido.png" id="3_8oj3n"]
 [ext_resource type="Script" path="res://Assets/Scenes/playercolorido.gd" id="5_ceoss"]
@@ -18,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://t7kfm0b1iew5" path="res://Assets/Scenes/trabalhadora.tscn" id="16_7tdpa"]
 [ext_resource type="PackedScene" uid="uid://gkhrt5m14f6a" path="res://Assets/Scenes/policia.tscn" id="17_0u77k"]
 [ext_resource type="PackedScene" uid="uid://d2hgvaxldasud" path="res://Assets/Scenes/door.tscn" id="18_gxt0c"]
+[ext_resource type="PackedScene" uid="uid://d8hmw5phqj30" path="res://Assets/Scenes/patricia_colorida.tscn" id="19_aa2ae"]
+[ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="20_7iwjs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htxvn"]
 texture = ExtResource("1_dchi0")
@@ -822,24 +825,115 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_imnno"]
+resource_name = "iris_saindo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPCs/iris_colorida:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(17, 21), Vector2(16, 58), Vector2(86, 60), Vector2(87, 96), Vector2(84, 135), Vector2(80, 170), Vector2(79, 217)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../NPCs/iris_colorida:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g8is7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../NPCs/iris_colorida:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../NPCs/iris_colorida:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pit4q"]
+_data = {
+"RESET": SubResource("Animation_g8is7"),
+"iris_saindo": SubResource("Animation_imnno")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1rar"]
+atlas = ExtResource("20_7iwjs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2krpk"]
+atlas = ExtResource("20_7iwjs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxw6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1rar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2krpk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="mundocolorido" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_85l0p")
+
+[node name="fade_transition" parent="." instance=ExtResource("2_q5vvi")]
+position = Vector2(-418, -278)
 
 [node name="layers" type="Node2D" parent="."]
 
 [node name="terrenocolorido" type="TileMapLayer" parent="layers"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAMAAAAAAAYAAAAAAAMAAAAAAAcAAAAAAAMAAAAAAAgAAAAAAAMAAAABAAAAAAAAAAMAAAABAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAAAAAAAAAMAAAACAAEAAAAAAAMAAAACAAIAAAAAAAMAAAACAAMAAAAAAAMAAAACAAQAAAAAAAMAAAACAAUAAAAAAAMAAAACAAYAAAAAAAMAAAACAAcAAAAAAAMAAAACAAgAAAAAAAMAAAADAAAAAAAAAAMAAAADAAEAAAAAAAMAAAADAAIAAAAAAAMAAAADAAMAAAAAAAMAAAADAAQAAAAAAAMAAAADAAUAAAAAAAMAAAADAAYAAAAAAAMAAAADAAcAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAAAAAAAAAMAAAAEAAEAAAAAAAMAAAAEAAIAAAAAAAMAAAAEAAMAAAAAAAMAAAAEAAQAAAAAAAMAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAMAAAAEAAcAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAIAAAAAAAMAAAAFAAMAAAAAAAMAAAAFAAQAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAYAAAAAAAMAAAAFAAcAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAAAAAAAAAMAAAAGAAEAAAAAAAMAAAAGAAIAAAAAAAMAAAAGAAMAAAAAAAMAAAAGAAQAAAAAAAMAAAAGAAUAAAAAAAMAAAAGAAYAAAAAAAMAAAAGAAcAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAAAAAAAAAMAAAAHAAEAAAAAAAMAAAAHAAIAAAAAAAMAAAAHAAMAAAAAAAMAAAAHAAQAAAAAAAMAAAAHAAUAAAAAAAMAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAAAAAAAAAMAAAAIAAEAAAAAAAMAAAAIAAIAAAAAAAMAAAAIAAMAAAAAAAMAAAAIAAQAAAAAAAMAAAAIAAUAAAAAAAMAAAAIAAYAAAAAAAMAAAAIAAcAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAAAAAAAAAMAAAAJAAEAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAUAAAAAAAMAAAAJAAYAAAAAAAMAAAAJAAcAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAAAAAAAAAMAAAAKAAEAAAAAAAMAAAAKAAIAAAAAAAMAAAAKAAMAAAAAAAMAAAAKAAQAAAAAAAMAAAAKAAUAAAAAAAMAAAAKAAYAAAAAAAMAAAAKAAcAAAAAAAMAAAAKAAgAAAAAAAMAAAALAAAAAAAAAAMAAAALAAEAAAAAAAMAAAALAAIAAAAAAAMAAAALAAMAAAAAAAMAAAALAAQAAAAAAAMAAAALAAUAAAAAAAMAAAALAAYAAAAAAAMAAAALAAcAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAAAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAgAAAAAAAMAAAANAAAAAAAAAAMAAAANAAEAAAAAAAMAAAANAAIAAAAAAAMAAAANAAMAAAAAAAMAAAANAAQAAAAAAAMAAAANAAUAAAAAAAMAAAANAAYAAAAAAAMAAAANAAcAAAAAAAMAAAANAAgAAAAAAAMAAAAOAAAAAAAAAAMAAAAOAAEAAAAAAAMAAAAOAAIAAAAAAAMAAAAOAAMAAAAAAAMAAAAOAAQAAAAAAAMAAAAOAAUAAAAAAAMAAAAOAAYAAAAAAAMAAAAOAAcAAAAAAAMAAAAOAAgAAAAAAAMAAAAPAAAAAAAAAAMAAAAPAAEAAAAAAAMAAAAPAAIAAAAAAAMAAAAPAAMAAAAAAAMAAAAPAAQAAAAAAAMAAAAPAAUAAAAAAAMAAAAPAAYAAAAAAAMAAAAPAAcAAAAAAAMAAAAPAAgAAAAAAAMAAAAQAAAAAAAAAAMAAAAQAAEAAAAAAAMAAAAQAAIAAAAAAAMAAAAQAAMAAAAAAAMAAAAQAAQAAAAAAAMAAAAQAAUAAAAAAAMAAAAQAAYAAAAAAAMAAAAQAAcAAAAAAAMAAAAQAAgAAAAAAAMAAAARAAAAAAAAAAMAAAARAAEAAAAAAAMAAAARAAIAAAAAAAMAAAARAAMAAAAAAAMAAAARAAQAAAAAAAMAAAARAAUAAAAAAAMAAAARAAYAAAAAAAMAAAARAAcAAAAAAAMAAAARAAgAAAAAAAMAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAAFAP//AAAAAAEAAAAGAP//AAAAAAEAAAAHAP//AAAAAAEAAAAIAP//AAAAAAEAAAAJAP//AAAAAAEAAAAKAP//AAAAAAEAAAALAP//AAAAAAEAAAAMAP//AAAAAAEAAAANAP//AAAAAAEAAAAOAP//AAAAAAEAAAAPAP//AAAAAAEAAAAQAP//AAAAAAEAAAARAP//AAAAAAEAAAD/////AAADAAQAAAD//wAAAAADAAQAAAD//wEAAAADAAQAAAD//wIAAAADAAQAAAD//wMAAAADAAQAAAD//wQAAAADAAQAAAD//wUAAAADAAQAAAD//wYAAAADAAQAAAD//wcAAAADAAQAAAD//wgAAAADAAQAAAD//wkAAAAEAAIAAAASAAkAAAAFAAIAAAAAAAkAAAAEAAUAAAABAAkAAAAEAAUAAAACAAkAAAAEAAUAAAADAAkAAAAEAAUAAAAEAAkAAAACAAIAAAAFAAkAAAACAAIAAAAGAAkAAAAEAAUAAAAHAAkAAAAEAAUAAAAIAAkAAAAEAAUAAAAJAAkAAAAEAAUAAAAKAAkAAAAEAAUAAAALAAkAAAAEAAUAAAAMAAkAAAAEAAUAAAANAAkAAAAEAAUAAAAOAAkAAAAEAAUAAAAPAAkAAAAEAAUAAAAQAAkAAAAEAAUAAAARAAkAAAAEAAUAAAASAP//AAAFAAQAAAASAAAAAAAFAAQAAAASAAEAAAAFAAQAAAASAAIAAAAFAAQAAAASAAMAAAAFAAQAAAASAAQAAAAFAAQAAAASAAUAAAAFAAQAAAASAAYAAAADAAIAAAASAAcAAAAFAAQAAAASAAgAAAAFAAQAAAASAP3/AAAFAAEAAAD///3/AAAEAAEAAAD///7/AAADAAQAAAASAP7/AAAFAAQAAAAAAP3/AAAEAAMAAAABAP3/AAAEAAMAAAACAP3/AAAEAAMAAAADAP3/AAAEAAMAAAAEAP3/AAAEAAMAAAAFAP3/AAAEAAMAAAAGAP3/AAAEAAMAAAAHAP3/AAAEAAMAAAAIAP3/AAAEAAMAAAAJAP3/AAAEAAMAAAAKAP3/AAAEAAMAAAALAP3/AAAEAAMAAAAMAP3/AAAEAAMAAAANAP3/AAAEAAMAAAAOAP3/AAAEAAMAAAAPAP3/AAAEAAMAAAAQAP3/AAAEAAMAAAARAP3/AAAEAAMAAAAAAP7/AAAAAAAAAAABAP7/AAABAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAEAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAACAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAAMAP7/AAADAAAAAAANAP7/AAAAAAAAAAAOAP7/AAAAAAAAAAAPAP7/AAAEAAAAAAAQAP7/AAAAAAAAAAARAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_aiiti")
 
 [node name="moveiscolorido" type="TileMapLayer" parent="layers"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAgAAAABAAIAAAAFAAgAAAACAAIAAAACAAEAAAAAAAMAAAACAAUAAAAAAAMAAAAIAAAAAAAAAAMAAAAIAAMAAAAAAAMAAAAAAAUAAAADAAQAAAAAAAEAAAADAAQAAAAGAAAAAAADAAQAAAAGAAMAAAADAAQAAAAKAAMAAAAGAAQAAAAKAAAAAAAGAAQAAAAEAAEAAAAGAAQAAAAEAAUAAAAGAAQAAAARAAcAAAASAAQAAAAQAAcAAAARAAQAAAAPAAcAAAARAAQAAAARAAgAAAASAAUAAAAQAAgAAAAQAAUAAAAPAAgAAAAQAAUAAAAOAAgAAAAQAAUAAAAOAAcAAAAQAAQAAAARAAUAAAASAAIAAAARAAQAAAASAAEAAAARAAMAAAASAAEAAAARAAIAAAASAAEAAAANAAcAAAAPAAQAAAANAAgAAAAPAAUAAAANAAYAAAAPAAMAAAANAAUAAAAPAAMAAAANAAQAAAAPAAMAAAANAAMAAAAPAAAAAAARAAEAAAASAAAAAAA=")
 tile_set = SubResource("TileSet_yy0pt")
 
 [node name="cafescolorido" type="TileMapLayer" parent="layers"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAARAAIAAAACAAAAAAANAAUAAAAAAAAAAAAQAAcAAAAAAAEAAAAOAAcAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_n6lrs")
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+y_sort_enabled = true
 position = Vector2(80, 128)
 motion_mode = 1
 script = ExtResource("5_ceoss")
@@ -864,19 +958,34 @@ zoom = Vector2(4, 4)
 [node name="NPCs" type="Node2D" parent="."]
 
 [node name="iris_colorida" parent="NPCs" instance=ExtResource("5_tx7f2")]
+y_sort_enabled = true
 position = Vector2(17, 21)
+dialogo = "pedidoiris2"
 
 [node name="evander_colorido" parent="NPCs" instance=ExtResource("15_svod2")]
+y_sort_enabled = true
 position = Vector2(179, 127)
 
 [node name="Trabalhadora" parent="NPCs" instance=ExtResource("16_7tdpa")]
+y_sort_enabled = true
 position = Vector2(112, 54)
 dialogo = "pedido3"
 
 [node name="policia" parent="NPCs" instance=ExtResource("17_0u77k")]
+y_sort_enabled = true
 position = Vector2(14, 86)
+dialogo = "pedido4"
+
+[node name="patricia_colorida" parent="NPCs" instance=ExtResource("19_aa2ae")]
+position = Vector2(250, 4)
+dialogo = "patricia2"
 
 [node name="Animações" type="Node" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animações"]
+libraries = {
+"": SubResource("AnimationLibrary_pit4q")
+}
 
 [node name="Areacafe" type="Node" parent="."]
 
@@ -886,7 +995,16 @@ destination_level_tag = "cafecenacolorido"
 destination_door_tag = "W"
 spawn_direction = "left"
 
+[node name="CollisionShape2D" parent="Areacafe/DoorCafeteria" index="0"]
+position = Vector2(-1, -1)
+
 [node name="spawn" parent="Areacafe/DoorCafeteria" index="1"]
 position = Vector2(-10, 0)
+
+[node name="exclamacao123" type="AnimatedSprite2D" parent="."]
+position = Vector2(281, 24)
+sprite_frames = SubResource("SpriteFrames_vxw6w")
+autoplay = "default"
+frame_progress = 0.712374
 
 [editable path="Areacafe/DoorCafeteria"]

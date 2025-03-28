@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://v61g4xyp777e"]
+
+[ext_resource type="Shader" path="res://Assets/Scenes/menu.gdshader" id="1_vdsnp"]
+[ext_resource type="Texture2D" uid="uid://cm435e5ewvg5t" path="res://Assets/Sprites/menu/bg.png" id="2_4vl0c"]
+[ext_resource type="FontFile" uid="uid://ir24in0hjky5" path="res://Assets/Sprites/menu/Reglisse.otf" id="3_not5r"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yn1lm"]
+shader = ExtResource("1_vdsnp")
+shader_parameter/speed = 0.1
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bg" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_yn1lm")
+offset_left = -340.0
+offset_top = -180.0
+offset_right = 1580.0
+offset_bottom = 900.0
+texture = ExtResource("2_4vl0c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 240.0
+offset_right = 991.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0.856487, 5.13074e-05, 0.650715, 1)
+theme_override_fonts/font = ExtResource("3_not5r")
+theme_override_font_sizes/font_size = 100
+text = "OBRIGADO POR JOGAR"

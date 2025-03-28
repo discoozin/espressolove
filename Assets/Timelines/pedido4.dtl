@@ -1,0 +1,16 @@
+if {ordempedido} == 13:
+	join David-Colorido right
+	David: Bom dia! Alguma bebida especial no menu de hoje?
+	- Bom dia! Como está sendo seu dia? Eu recomendo o nosso café favorito por aqui, o Cappucino
+		policial: Nunca experimentei esse café antes. Me vê um desse aí então, por gentileza!
+	- Bom dia! Como andam as coisas? O mais popular daqui é o Cappucino, os clientes amam.
+		policial: Nunca ouvi falar desse antes. Quero um desse aí, por gentileza!
+	update David-Colorido (neutro_falando)
+	David: Claro! Não vai demorar muito.
+	set {qualcafe} = 2
+	set {exclamacao} = 3
+	leave --All--
+if {cappucino} == 1:
+	policial: Valeu, eu não funciono sem o meu café diário. Continue com o bom trabalho!
+	set {ordempedido} = 14
+	set {exclamacao} = 14

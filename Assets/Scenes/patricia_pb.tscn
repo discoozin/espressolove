@@ -98,6 +98,7 @@ debug_color = Color(0.925558, 4.24513e-05, 0.675778, 0.42)
 [node name="exclamacao5" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -21)
 sprite_frames = SubResource("SpriteFrames_8btje")
+autoplay = "default"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,38 @@
+if {ordempedido} == 14:
+	join patricia-colorido (seria_falando) left
+	Patrícia: Lá vem ela de novo.
+	leave patricia-colorido
+	join David-Colorido (feliz_falando) right
+	join Iris-Colorido (alegre) left
+	David: Bom dia Íris! Tá tudo bem com você? O de sempre?
+	update David-Colorido (feliz)
+	update Iris-Colorido (alegre_falando)
+	Iris: Bom dia Davi. Estou bem sim, obrigada por perguntar... Sim, o de sempre, por favor.
+	update Iris-Colorido (alegre)
+	update David-Colorido (feliz_falando)
+	David: Pode deixar comigo!
+	leave --All--
+	set {qualcafe} = 2
+	set {exclamacao} = 3
+if {cappucino} == 1:
+	join David-Colorido (feliz_falando) right
+	David: Aqui seu Cappuccino, espero que goste.
+	join Iris-Colorido (alegre_falando) left
+	Iris: Está da forma que eu gosto, muito obrigada.
+	update Iris-Colorido (alegre)
+	update David-Colorido (nervoso_falando)
+	David: O seu pedido foi o último do meu expediente… Eu conheço um lugar muito bonito perto do parque.
+	David: Se você quiser, a gente pode ir lá juntos... O que acha?
+	update David-Colorido (nervoso)
+	update Iris-Colorido (assustada)
+	Iris: !!!
+	update Iris-Colorido (alegre_falando)
+	Iris: Sério? Parece divertido! Eu adoraria.
+	update Iris-Colorido (alegre)
+	update David-Colorido (feliz_falando)
+	David: Que ótimo! Então, vamos! Tenho certeza de que você vai adorar esse lugar.
+	update David-Colorido (feliz)
+	update Iris-Colorido (alegre_falando)
+	Iris: Eu vou ficar te esperando lá fora.
+	leave --All--
+	set {ordempedido} = 58

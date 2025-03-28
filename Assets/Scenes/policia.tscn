@@ -72,7 +72,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="policia" type="CharacterBody2D"]
@@ -80,6 +80,8 @@ script = ExtResource("1_eny7c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_br313")
+autoplay = "default"
+frame_progress = 0.568859
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
@@ -95,6 +97,9 @@ shape = SubResource("RectangleShape2D_77ywh")
 [node name="exclamacao7" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -19)
 sprite_frames = SubResource("SpriteFrames_q0218")
+autoplay = "default"
+frame = 1
+frame_progress = 0.634706
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

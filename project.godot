@@ -34,7 +34,10 @@ directories/dch_directory={
 "Patricia-pb": "res://Assets/Character/Patricia-pb.dch",
 "Patrícia": "res://Assets/Character/Patrícia.dch",
 "Senhorinha": "res://Assets/Character/Senhorinha.dch",
-"patricia-colorido": "res://Assets/Character/patricia-colorido.dch"
+"patricia-colorido": "res://Assets/Character/patricia-colorido.dch",
+"patricia2": "res://Assets/Character/patricia2.dch",
+"policial": "res://Assets/Character/policial.dch",
+"trabalhadora": "res://Assets/Character/trabalhadora.dch"
 }
 directories/dtl_directory={
 "evander2": "res://Assets/Timelines/evander2.dtl",
@@ -42,11 +45,15 @@ directories/dtl_directory={
 "evander4": "res://Assets/Timelines/evander4.dtl",
 "montar_pedidos": "res://Assets/Timelines/montar_pedidos.dtl",
 "patricia1": "res://Assets/Timelines/patricia1.dtl",
+"patricia2": "res://Assets/Timelines/patricia2.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
 "pedido2": "res://Assets/Character/pedido2.dtl",
 "pedido3": "res://Assets/Timelines/pedido3.dtl",
+"pedido4": "res://Assets/Timelines/pedido4.dtl",
 "pedidoiris1": "res://Assets/Timelines/pedidoiris1.dtl",
+"pedidoiris2": "res://Assets/Timelines/pedidoiris2.dtl",
 "testes": "res://testes.dtl",
+"trabalhadora": "res://Assets/Character/trabalhadora.dtl",
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
 }
 variables={

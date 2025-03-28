@@ -19,4 +19,4 @@ if {ordempedido} == 9:
 	Patrícia: Quase esqueci, David. Você já pode finalizar o seu expediente.
 	leave --All--
 	set {ordempedido} = 10
-	set {expresso} = 10
+	set {exclamacao} = 10

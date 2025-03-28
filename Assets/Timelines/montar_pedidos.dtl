@@ -24,3 +24,12 @@ if {ordempedido} == 6:
 if {ordempedido} == 8:
 	set {exclamacao} = 8
 	set {ordempedido} = 100
+if {ordempedido} == 11:
+	set {exclamacao} = 11
+	set {ordempedido} = 100
+if {ordempedido} == 13:
+	set {exclamacao} = 13
+	set {ordempedido} = 100
+if {ordempedido} == 14:
+	set {exclamacao} = 14
+	set {ordempedido} = 100

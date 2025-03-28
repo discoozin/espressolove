@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 func exclamacao():
 	excl = Dialogic.VAR.get("exclamacao")
 		
-	if excl == 14:
+	if excl == 10:
 		$exclamacao99.visible = true
 	else:
 		$exclamacao99.visible = false

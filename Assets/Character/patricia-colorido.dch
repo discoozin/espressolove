@@ -10,16 +10,61 @@
 "style": "",
 "suffix": ""
 },
-"default_portrait": "patricia",
+"default_portrait": "neutro",
 "description": "",
-"display_name": "patricia-colorido",
+"display_name": "Patricia",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"patricia": {
+"alegre": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/patricia/patricia.png\""
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia alegre.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"alegre_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia alegre fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia neutro.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia neutro falando.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"seria": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia seria.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"seria_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/patricia/talksprite/patricia seria fala.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

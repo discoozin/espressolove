@@ -1,9 +1,12 @@
 if {ordempedido} == 10:
 	join Evander-Colorido left
 	Evander: Boa tarde, David. Você chegou mais cedo hoje, não?
-	join David-Colorido right
+	join David-Colorido (neutro) right
+	update David-Colorido (neutro_falando) right
 	David: Boa tarde, Evander. Consegui pegar o ônibus mais cedo hoje
 	David: Pelo visto a cafeteria já está cheia, vou começar a trabalhar.
+	update David-Colorido (neutro)
+	leave --All--
 	set {ordempedido} = 11
 	set {exclamacao} = 11
 	set {mudatextger} = 4

@@ -1,0 +1,34 @@
+if {ordempedido} <= 11:
+	join patricia-colorido (neutro) left
+	Patrícia: Oi David, precisa de alguma coisa?
+	- Por enquanto não.
+		Patrícia: Okayy, quando precisares de algo, só me chamar.
+if {ordempedido} == 12:
+	join patricia-colorido (neutro_falando) left
+	Patrícia: Você se saiu bem nas últimas semanas para um novato.
+	update patricia-colorido (neutro)
+	join David-Colorido (neutro_falando) right
+	David: Obrigado, Patrícia.
+	update patricia-colorido (seria_falando)
+	Patrícia: Mas quando aquela menina vem, você sempre a trata diferente. Não é muito profissional.
+	update patricia-colorido (seria)
+	David: ...
+	update David-Colorido (neutro)
+	update patricia-colorido (seria_falando)
+	Patrícia: Se você ficar de romance com ela, vai te atrapalhar no horário de trabalho. Se eu contar isso pro gerente, ele não vai gostar disso.
+	update patricia-colorido (seria)
+	update David-Colorido (nervoso_falando)
+	David: Eu não tô afim dela!
+	update David-Colorido (nervoso)
+	update patricia-colorido (seria_falando)
+	Patrícia: É mesmo? Não tenho tanta certeza disso.
+	update patricia-colorido (seria)
+	update David-Colorido (nervoso_falando)
+	David: Tô falando sério.
+	David: Enfim, vou voltar para o trabalho.
+	leave David
+	update patricia-colorido (seria_falando)
+	Patrícia: Affs
+	leave Patrícia
+	set {ordempedido} = 13
+	set {exclamacao} = 13

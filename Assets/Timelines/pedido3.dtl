@@ -1,12 +1,23 @@
 if {ordempedido} == 11:
-	join David-Colorido right
+	join David-Colorido (neutro) right
 	- Bom dia, o que deseja pedir?
-		Bom dia. Estou atrasada para o trabalho, se puder apressar...
-		...Preciso de um Expresso bem forte, por favor.
+		trabalhadora: Bom dia. Estou atrasada para o trabalho, se puder apressar...
+		trabalhadora: ...Preciso de um Expresso bem forte, por favor.
+		update David-Colorido (neutro_falando)
 		David: Certo, um momento.
 		David: (Espero que eu consiga fazer certo. Se não, vou perder essa oportunidade.)
 	- Bom dia. Seu pedido?
-		Bom dia. Estou atrasada para o trabalho, se puder apressar...
-		...Preciso de um Expresso bem forte, por favor.
+		trabalhadora: Bom dia. Estou atrasada para o trabalho, se puder apressar...
+		trabalhadora: ...Preciso de um Expresso bem forte, por favor.
+		update David-Colorido (neutro_falando)
 		David: Certo, um momento.
 		David: (Espero que eu consiga fazer certo. Se não, vou perder essa oportunidade.)
+	leave David-Colorido
+	set {qualcafe} = 1
+	set {exclamacao} = 3
+if {expresso} == 1:
+	trabalhadora: Isso vai me deixar bem acordada pro resto do dia, obrigada.
+	set {expresso} = 0
+	set {cont_pedido} = 0
+	set {ordempedido} = 12
+	set {exclamacao} = 12

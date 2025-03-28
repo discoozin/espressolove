@@ -17,12 +17,12 @@ if {ordempedido} == 6:
 	# #ACERTOU
 if {cafeleite} == 1:
 	Senhorinha: Obrigada meu bem, esse sabor me recorda dos tempos antigos. Tenha um bom dia.
+	
+	# #ERROU
 	set {cafeleite} = 0
 	set {ordempedido} = 7
 	set {cont_pedido} = 0
 	set {exclamacao} = 7
-	
-	# #ERROU
 if {expresso} == 1:
 	if {cont_pedido} >= 2:
 		Senhorinha: Acho melhor eu procurar um lugar que vende chá mesmo.

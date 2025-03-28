@@ -10,16 +10,79 @@
 "style": "",
 "suffix": ""
 },
-"default_portrait": "iris",
+"default_portrait": "neutro",
 "description": "",
 "display_name": "Iris-Colorido",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"iris": {
+"alegre": {
 "export_overrides": {
-"image": "\"res://Assets/Sprites/iris/iris.png\""
+"image": "\"res://Assets/Sprites/iris/talksprite/iris alegre.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"alegre_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris alegre fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"assustada": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris assustada.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"assustada_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris assustada fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervosa": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris nervosa.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervosa_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris nervosa fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris neutro.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro_falando": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/iris/talksprite/iris neutro fala.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
