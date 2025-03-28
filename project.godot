@@ -19,6 +19,7 @@ config/icon="res://logoespressolove.png"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://global.gd"
+NavigationManager="*res://Assets/global/navigation_manager.gd"
 
 [dialogic]
 

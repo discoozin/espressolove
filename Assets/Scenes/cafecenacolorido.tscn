@@ -1,34 +1,36 @@
-[gd_scene load_steps=12 format=3 uid="uid://dgdghhvi8777m"]
+[gd_scene load_steps=13 format=3 uid="uid://xxqvdht7icq"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/cenacafe.gd" id="1_m41h1"]
-[ext_resource type="PackedScene" uid="uid://d2hgvaxldasud" path="res://Assets/Scenes/door.tscn" id="2_5oumf"]
-[ext_resource type="Texture2D" uid="uid://0ts4bst1tlq1" path="res://Assets/Sprites/spritescenacafe/cenacafeblackwhite.png" id="2_6wwfe"]
-[ext_resource type="PackedScene" uid="uid://b4le4ka4mds6v" path="res://Assets/Scenes/cafeteiragrande.tscn" id="3_gl5ms"]
-[ext_resource type="Script" path="res://Assets/Scripts/texture_rect.gd" id="4_1yw5g"]
-[ext_resource type="Texture2D" uid="uid://c8kfcfeprgrqf" path="res://Assets/Sprites/spritescenacafe/cafe.png" id="4_hdlf1"]
-[ext_resource type="Script" path="res://Assets/Scripts/texture_rect_2.gd" id="6_6harq"]
-[ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_qi7ed"]
-[ext_resource type="AudioStream" uid="uid://pg46uexi8kca" path="res://Assets/SFX/somcafe.mp3" id="8_1o27a"]
-[ext_resource type="Texture2D" uid="uid://c80ywj1awh2hd" path="res://Assets/Sprites/bloquinho_pretobranco.png" id="9_kyu06"]
-[ext_resource type="FontFile" uid="uid://dfuxuw8qsfp7x" path="res://Assets/Timelines/Estilo/Caveat-VariableFont_wght.ttf" id="10_fyleq"]
+[ext_resource type="Texture2D" uid="uid://c4tly02pgxid6" path="res://Assets/Tilemap/cenacafecolorido.png" id="1_i5s7s"]
+[ext_resource type="Script" path="res://Assets/Scripts/cafecenacolorido.gd" id="1_ky8tl"]
+[ext_resource type="PackedScene" uid="uid://d2hgvaxldasud" path="res://Assets/Scenes/door.tscn" id="2_cesfa"]
+[ext_resource type="PackedScene" uid="uid://b4le4ka4mds6v" path="res://Assets/Scenes/cafeteiragrande.tscn" id="2_ueihq"]
+[ext_resource type="Texture2D" uid="uid://cjk34uotathel" path="res://Assets/Tilemap/cafeteiracolorida.png" id="3_t6cef"]
+[ext_resource type="Texture2D" uid="uid://c8kfcfeprgrqf" path="res://Assets/Sprites/spritescenacafe/cafe.png" id="4_ob26n"]
+[ext_resource type="Script" path="res://Assets/Scripts/texture_rect.gd" id="5_8qt28"]
+[ext_resource type="Script" path="res://Assets/Scripts/texture_rect_2.gd" id="6_8rgg7"]
+[ext_resource type="Texture2D" uid="uid://dugcx3vnjn3g3" path="res://Assets/Sprites/spritescenacafe/cafepronto.png" id="7_oepp6"]
+[ext_resource type="AudioStream" uid="uid://pg46uexi8kca" path="res://Assets/SFX/somcafe.mp3" id="8_tmk7g"]
+[ext_resource type="Texture2D" uid="uid://djed241id4y1c" path="res://Assets/Sprites/bloquinho.png" id="9_mglvo"]
+[ext_resource type="FontFile" uid="uid://dfuxuw8qsfp7x" path="res://Assets/Timelines/Estilo/Caveat-VariableFont_wght.ttf" id="10_qo17x"]
 
-[node name="cenacafe" type="Node2D"]
-script = ExtResource("1_m41h1")
+[node name="cafecenacolorido" type="Node2D"]
+script = ExtResource("1_ky8tl")
 
-[node name="Door" parent="." instance=ExtResource("2_5oumf")]
-destination_level_tag = "main"
+[node name="Door" parent="." instance=ExtResource("2_cesfa")]
+destination_level_tag = "mundocolorido"
 destination_door_tag = "E"
 spawn_direction = "right"
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(576.5, 326)
 scale = Vector2(2.39375, 1.78889)
-texture = ExtResource("2_6wwfe")
+texture = ExtResource("1_i5s7s")
 metadata/_edit_lock_ = true
 
-[node name="cafeteiragrande" parent="." instance=ExtResource("3_gl5ms")]
+[node name="cafeteiragrande" parent="." instance=ExtResource("2_ueihq")]
 position = Vector2(578, 347)
 scale = Vector2(1.1, 1.1)
+texture = ExtResource("3_t6cef")
 
 [node name="TextureRect1" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(81, 54)
@@ -36,9 +38,9 @@ offset_left = 189.0
 offset_top = 515.0
 offset_right = 270.0
 offset_bottom = 569.0
-texture = ExtResource("4_hdlf1")
+texture = ExtResource("4_ob26n")
 expand_mode = 1
-script = ExtResource("4_1yw5g")
+script = ExtResource("5_8qt28")
 
 [node name="panel1" type="Panel" parent="TextureRect1"]
 show_behind_parent = true
@@ -55,7 +57,7 @@ offset_top = 420.0
 offset_right = 619.0
 offset_bottom = 474.0
 expand_mode = 1
-script = ExtResource("6_6harq")
+script = ExtResource("6_8rgg7")
 
 [node name="panel2" type="Panel" parent="TextureRect2"]
 show_behind_parent = true
@@ -83,15 +85,15 @@ one_shot = true
 visible = false
 position = Vector2(586, 426)
 scale = Vector2(3, 3)
-texture = ExtResource("7_qi7ed")
+texture = ExtResource("7_oepp6")
 
 [node name="somcafe" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_1o27a")
+stream = ExtResource("8_tmk7g")
 
-[node name="BloquinhoPretobranco" type="Sprite2D" parent="."]
+[node name="bloquinho" type="Sprite2D" parent="."]
 position = Vector2(991.562, 438.438)
 scale = Vector2(3.71406, 3.54875)
-texture = ExtResource("9_kyu06")
+texture = ExtResource("9_mglvo")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 917.0
@@ -100,7 +102,7 @@ offset_right = 1225.0
 offset_bottom = 441.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -8
-theme_override_fonts/font = ExtResource("10_fyleq")
+theme_override_fonts/font = ExtResource("10_qo17x")
 theme_override_font_sizes/font_size = 29
 
 [node name="textocafepronto" type="Label" parent="."]

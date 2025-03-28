@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bweekbj0w1hkh"]
+
+[sub_resource type="GDScript" id="GDScript_tcqkm"]
+script/source = "extends Area2D
+
+class_name Door
+
+@export var destination_level_tag: String
+@export var destination_door_tag: String
+@export var spawn_direction =\"up\"
+
+@onready var spawn = $spawn
+ 
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuavv"]
+
+[node name="Door" type="Area2D"]
+script = SubResource("GDScript_tcqkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vuavv")
+
+[node name="spawn" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 #exporta a variavel dialogo, sendo possivel alterar fora do codigo
 @export var dialogo: String
 
-var ordem = Dialogic.VAR.get("ordempedido")
+var ordem =0 #Dialogic.VAR.get("ordempedido")
 var anim = 2
 
 

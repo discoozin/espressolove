@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	qualcafe = Dialogic.VAR.get("qualcafe")
 	
 	if Input.is_action_just_pressed("interact"):
-		get_tree().change_scene_to_file("res://Assets/Scenes/main.tscn") #resolvernonavigator
+		NavigationManager.go_to_level("main", "Cafeteria" ) #resolvernonavigator
 		Dialogic.VAR.set("animcafe", 0)
 	if qualcafe == 1:
 		$Label.text = "O cliente quer um\n Expresso"
@@ -30,5 +30,3 @@ func _on_timer_timeout() -> void:
 	texture_rect_1.visible=false
 	cafepronto.visible=true
 	$textocafepronto.visible=true
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://Assets/Scenes/main.tscn") #resolvernonavigator

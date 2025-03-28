@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export var movement_speed: float=500
 var character_direction: Vector2
 var parado
@@ -31,3 +33,9 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, movement_speed)
 	
 	move_and_slide()
+
+func _ready() -> void:
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position:Vector2, direction:String):
+	global_position=position

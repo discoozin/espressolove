@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 #não precisa de explicação, é só a variavel pra ver se da pra interagir ou não BURRO BURRO BURRO
 var interativo = false
-var ordem = Dialogic.VAR.get("ordempedidos")
+var ordem =0 #Dialogic.VAR.get("ordempedidos")
 var anim =0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

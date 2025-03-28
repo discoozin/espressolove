@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="3_6jbc8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_awxe3"]
-radius = 12.0
-height = 24.0
+radius = 1.0
+height = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dttcu"]
 atlas = ExtResource("3_6jbc8")
@@ -39,7 +39,7 @@ script = ExtResource("1_sdlsl")
 texture = ExtResource("1_vhlkl")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 0)
+position = Vector2(19, 0)
 shape = SubResource("CapsuleShape2D_awxe3")
 
 [node name="Marker2D" type="Marker2D" parent="."]
