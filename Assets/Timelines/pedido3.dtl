@@ -1,0 +1,12 @@
+if {ordempedido} == 11:
+	join David-Colorido right
+	- Bom dia, o que deseja pedir?
+		Bom dia. Estou atrasada para o trabalho, se puder apressar...
+		...Preciso de um Expresso bem forte, por favor.
+		David: Certo, um momento.
+		David: (Espero que eu consiga fazer certo. Se não, vou perder essa oportunidade.)
+	- Bom dia. Seu pedido?
+		Bom dia. Estou atrasada para o trabalho, se puder apressar...
+		...Preciso de um Expresso bem forte, por favor.
+		David: Certo, um momento.
+		David: (Espero que eu consiga fazer certo. Se não, vou perder essa oportunidade.)

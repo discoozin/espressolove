@@ -6,7 +6,7 @@ extends CharacterBody2D
 #não precisa de explicação, é só a variavel pra ver se da pra interagir ou não BURRO BURRO BURRO
 var interativo = false
 var muda_dialogo
-var ordem
+var excl
 
 func _ready():
 	$exclamacao2.visible = false
@@ -24,14 +24,14 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 #TU SABE OQ O _PROCESS FAZ NÉ?
 func _process(delta: float) -> void:
-	ordem = Dialogic.VAR.get("ordempedido")
+	excl = Dialogic.VAR.get("exclamacao")
 	change_dialogue()
 	
 	#o if verifica se a tecla E ta sendo pressionada e se o interativo é verdadeiro, se sim
 	#ele executa o Dialogic, acho que da pra fazer o player parar de andar com isso aqui, mas não sei dizer
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
-	if ordem == 0 or ordem == 2 or ordem == 5:
+	if excl == 0 or excl == 2 or excl == 5 or excl == 7:
 		$exclamacao2.visible = true
 	else:
 		$exclamacao2.visible = false

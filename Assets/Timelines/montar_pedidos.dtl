@@ -6,14 +6,21 @@
 	set {cappucino} = 0
 	set {cafeleite} = 0
 - Capuccino
-	set {ordempedido} = 4
 	set {cappucino} = 1
 	set {animcafe} = 1
 	set {expresso} = 0
 	set {cafeleite} = 0
 - Café com leite
-	set {ordempedido} = 4
 	set {cafeleite} = 1
 	set {animcafe} = 1
 	set {expresso} = 0
 	set {cappucino} = 0
+if {ordempedido} == 3:
+	set {exclamacao} = 4
+	set {ordempedido} = 100
+if {ordempedido} == 6:
+	set {exclamacao} = 6
+	set {ordempedido} = 100
+if {ordempedido} == 8:
+	set {exclamacao} = 8
+	set {ordempedido} = 100

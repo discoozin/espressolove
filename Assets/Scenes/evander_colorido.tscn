@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3pfa6p315stf"]
+[gd_scene load_steps=15 format=3 uid="uid://c3pfa6p315stf"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/evander_colorido.gd" id="1_41sbd"]
 [ext_resource type="Texture2D" uid="uid://c4gg3c7pksvvr" path="res://Assets/Sprites/evander/evander colorido.png" id="1_gp8pt"]
+[ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="3_locrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axv4c"]
 size = Vector2(20, 17)
@@ -52,6 +53,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cs84e"]
 size = Vector2(24, 26)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_quiau"]
+atlas = ExtResource("3_locrw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbkpt"]
+atlas = ExtResource("3_locrw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quiau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbkpt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="evander_colorido" type="CharacterBody2D"]
 script = ExtResource("1_41sbd")
 
@@ -71,6 +94,10 @@ frame_progress = 0.543981
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_cs84e")
 debug_color = Color(0.971836, 0, 0.445219, 0.42)
+
+[node name="exclamacao99" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -19)
+sprite_frames = SubResource("SpriteFrames_4vgjv")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

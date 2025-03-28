@@ -8,3 +8,4 @@ if {ordempedido} == 7:
 	set {fezpedido?} = 2
 	set {ordempedido} = 8
 	set {mudatextger} = 3
+	set {exclamacao} = 8

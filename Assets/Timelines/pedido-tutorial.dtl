@@ -42,11 +42,13 @@ if {tutorial} == 1:
 	set {tutorial} = 2
 	set {podeandar} = false
 	set {ordempedido} = 2
+	set {exclamacao} = 2
 # ORDEM 4
 if {expresso} == 1:
 	Bernardo: Pelo cheiro parece estar ótimo, obrigado.
 	set {expresso} = 0
 	set {ordempedido} = 5
+	set {exclamacao} = 5
 # VOLTA ORDEM 3
 if {cappucino} == 1:
 	if {cont_pedido} == 2:
@@ -55,12 +57,12 @@ if {cappucino} == 1:
 		set {cont_pedido} = 0
 		# faz ele ir embora
 		set {animnpc} = 1
-		set {ordempedido} = 3
+		set {exclamacao} = 3
 	elif {cont_pedido} <= 1:
 		Bernardo: Não foi isso que eu pedi, eu pedi um Expresso.
 		set {cont_pedido} += 1
 		set {cappucino} = 0
-		set {ordempedido} = 3
+		set {exclamacao} = 3
 if {cafeleite} == 1:
 	if {cont_pedido} == 2:
 		Bernardo: É o terceiro pedido errado que você entrega. Vou embora.
@@ -68,9 +70,9 @@ if {cafeleite} == 1:
 		set {cafeleite} = 0
 		# faz ele ir embora
 		set {animnpc} = 1
-		set {ordempedido} = 3
+		set {exclamacao} = 3
 	elif {cont_pedido} <= 1:
 		Bernardo: Não foi isso que eu pedi, eu pedi um Expresso.
 		set {cont_pedido} += 1
 		set {cafeleite} = 0
-		set {ordempedido} = 3
+		set {exclamacao} = 3

@@ -5,4 +5,5 @@ if {ordempedido} == 10:
 	David: Boa tarde, Evander. Consegui pegar o ônibus mais cedo hoje
 	David: Pelo visto a cafeteria já está cheia, vou começar a trabalhar.
 	set {ordempedido} = 11
+	set {exclamacao} = 11
 	set {mudatextger} = 4

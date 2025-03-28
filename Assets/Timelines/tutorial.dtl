@@ -2,7 +2,6 @@
 # Essa variavel diz as etapas do tutorial
 if {tutorial} == 0:
 	set {podeandar} = true
-	# 
 	join Evander left
 	join David right
 	Evander: Seja bem-vindo ao seu primeiro dia de trabalho aqui na cafeteria. Vamos começar o seu treinamento.
@@ -11,6 +10,7 @@ if {tutorial} == 0:
 	set {tutorial} = 1
 	set {podeandar} = false
 	set {ordempedido} = 1
+	set {exclamacao} = 1
 	# vai levar para outro dialogo
 	# continuação do pedido no "pedido-tutorial"
 # ORDEM2
@@ -23,3 +23,4 @@ elif {tutorial} == 2:
 	set {podeandar} = false
 	set {mudatextger} = 1
 	set {ordempedido} = 3
+	set {exclamacao} = 3

@@ -12,6 +12,7 @@ if {ordempedido} == 6:
 		Senhorinha: Vou escolher essa opção então meu querido.
 	David: Certinho, senhora, só um segundo e seu café com leite já vai estar saindo.
 	set {qualcafe} = 3
+	set {exclamacao} = 3
 	
 	# #ACERTOU
 if {cafeleite} == 1:
@@ -19,22 +20,28 @@ if {cafeleite} == 1:
 	set {cafeleite} = 0
 	set {ordempedido} = 7
 	set {cont_pedido} = 0
+	set {exclamacao} = 7
 	
 	# #ERROU
 if {expresso} == 1:
 	if {cont_pedido} >= 2:
 		Senhorinha: Acho melhor eu procurar um lugar que vende chá mesmo.
+		set {expresso} = 0
+		set {exclamacao} = 3
 	elif {cont_pedido} <= 1:
 		Senhorinha: Eu não me lembro de ter pedido por isso. Eu pedi um café com leite.
-	set {expresso} = 0
-	set {cappucino} = 0
-	set {cont_pedido} += 1
+		set {expresso} = 0
+		set {cont_pedido} += 1
+		set {exclamacao} = 3
 
 
 if {cappucino} == 1:
 	if {cont_pedido} >= 2:
 		Senhorinha: Acho melhor eu procurar um lugar que vende chá mesmo.
+		set {cappucino} = 0
+		set {exclamacao} = 3
 	elif {cont_pedido} <= 1:
 		Senhorinha: Eu não me lembro de ter pedido por isso. Eu pedi um café com leite.
-	set {cappucino} = 0
-	set {cont_pedido} += 1
+		set {cappucino} = 0
+		set {cont_pedido} += 1
+		set {exclamacao} = 3

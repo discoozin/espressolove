@@ -18,3 +18,4 @@ if {ordempedido} == 5:
 	set {ordempedido} = 6
 	set {fezpedido?} = 1
 	set {mudatextger} = 2
+	set {exclamacao} = 6

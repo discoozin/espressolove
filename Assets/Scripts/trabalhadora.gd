@@ -12,7 +12,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	interativo = false
-	
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 func exclamacao():
 	excl = Dialogic.VAR.get("exclamacao")
 		
-	if excl == 8:
-		$exclamacao4.visible = true
+	if excl == 11:
+		$exclamacao6.visible = true
 	else:
-		$exclamacao4.visible = false
+		$exclamacao6.visible = false

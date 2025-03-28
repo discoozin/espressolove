@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://diclwxg8s651q"]
+[gd_scene load_steps=15 format=3 uid="uid://diclwxg8s651q"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/iris_colorida.gd" id="1_fr4rj"]
 [ext_resource type="Texture2D" uid="uid://w1xs1colebxy" path="res://Assets/Sprites/iris/iris idle colorida.png" id="2_gxdmx"]
+[ext_resource type="Texture2D" uid="uid://dljiwxjfp4rfm" path="res://Assets/Sprites/exclamacao.png" id="3_qunro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ctb0"]
 size = Vector2(22, 26)
@@ -52,6 +53,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d4dq0"]
 size = Vector2(26, 30)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c4vf"]
+atlas = ExtResource("3_qunro")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi6kd"]
+atlas = ExtResource("3_qunro")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qewl2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c4vf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi6kd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="iris_colorida" type="CharacterBody2D"]
 script = ExtResource("1_fr4rj")
 
@@ -70,6 +93,10 @@ autoplay = "default"
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_d4dq0")
 debug_color = Color(0.799993, 0.631193, 7.70092e-07, 0.42)
+
+[node name="exclamacao9" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -20)
+sprite_frames = SubResource("SpriteFrames_qewl2")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

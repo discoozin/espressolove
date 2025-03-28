@@ -18,6 +18,7 @@ if {ordempedido} == 8:
 	David: Ah, só um minuto moça.
 	leave --All--
 	set {qualcafe} = 1
+	set {exclamacao} = 3
 if {cappucino} == 1:
 	join David right
 	David: Aqui está o seu pedido.
@@ -28,3 +29,4 @@ if {cappucino} == 1:
 	David: Volte sempre.
 	leave --All--
 	set {ordempedido} = 9
+	set {exclamacao} = 9

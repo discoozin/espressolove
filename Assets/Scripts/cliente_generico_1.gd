@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 var ordem =0 #Dialogic.VAR.get("ordempedido")
 var anim = 2
-
+var excl = 0
 
 
 func _ready():
@@ -35,12 +35,17 @@ func _process(delta: float) -> void:
 	#ele executa o Dialogic, acho que da pra fazer o player parar de andar com isso aqui, mas não sei dizer
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
-	if ordem == 1 or ordem == 4:
+	
+	exclamacao()
+	animsaida()
+	
+func exclamacao():
+	excl = Dialogic.VAR.get("exclamacao")
+
+	if excl == 1 or excl == 4:
 		$exclamacao.visible = true
 	else:
 		$exclamacao.visible = false
-	
-	animsaida()
 	
 func animsaida():
 	if ordem == 5 and anim == 0:

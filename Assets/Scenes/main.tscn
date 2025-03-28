@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cetfh10kdeq4k" path="res://Assets/Scenes/cliente_generico_1.tscn" id="3_rywk3"]
 [ext_resource type="Texture2D" uid="uid://cs3jvjn4wely2" path="res://Assets/Tilemap/cafes.png" id="3_sy8oq"]
 [ext_resource type="PackedScene" uid="uid://b3vqgvb6w7keu" path="res://Assets/Scenes/patricia_pb.tscn" id="5_srv8o"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/iris.tscn" id="6_tneln"]
+[ext_resource type="PackedScene" uid="uid://elu2sijtn75d" path="res://Assets/Scenes/iris.tscn" id="6_tneln"]
 [ext_resource type="PackedScene" uid="uid://baqoeulcx21kj" path="res://Assets/Scenes/cafeteira.tscn" id="7_v8ymj"]
 [ext_resource type="Script" path="res://Assets/Scripts/portaestoque.gd" id="8_ldgye"]
 [ext_resource type="PackedScene" uid="uid://lkpu6lhrluyi" path="res://Assets/Scenes/cliente_generico_2.tscn" id="9_cyc5t"]

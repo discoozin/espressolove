@@ -44,6 +44,7 @@ directories/dtl_directory={
 "patricia1": "res://Assets/Timelines/patricia1.dtl",
 "pedido-tutorial": "res://Assets/Timelines/pedido-tutorial.dtl",
 "pedido2": "res://Assets/Character/pedido2.dtl",
+"pedido3": "res://Assets/Timelines/pedido3.dtl",
 "pedidoiris1": "res://Assets/Timelines/pedidoiris1.dtl",
 "testes": "res://testes.dtl",
 "tutorial": "res://Assets/Timelines/tutorial.dtl"
@@ -53,6 +54,7 @@ variables={
 "cafeleite": 0.0,
 "cappucino": 0.0,
 "cont_pedido": 0.0,
+"exclamacao": 0.0,
 "expresso": 0.0,
 "fezpedido?": 0.0,
 "mudatextger": 0.0,
