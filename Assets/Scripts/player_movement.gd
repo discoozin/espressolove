@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var movement_speed: float=500
+
 var character_direction: Vector2
 var parado
 var ordem
@@ -39,3 +40,6 @@ func _ready() -> void:
 	
 func _on_spawn(position:Vector2, direction:String):
 	global_position=position
+	$sprite.play("bwcafe")
+	await get_tree().create_timer(0.2).timeout
+	$sprite.flip_h=true

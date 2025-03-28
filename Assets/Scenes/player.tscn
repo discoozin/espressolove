@@ -1,17 +1,43 @@
-[gd_scene load_steps=102 format=3 uid="uid://b8fosplnjvvb2"]
+[gd_scene load_steps=115 format=3 uid="uid://b8fosplnjvvb2"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/player_movement.gd" id="1_li8dt"]
 [ext_resource type="Texture2D" uid="uid://dmmqjbfs3qo36" path="res://Assets/Sprites/david/DAVID (IDLE) - frente.png" id="2_47pib"]
 [ext_resource type="Texture2D" uid="uid://bpdd5qav6bfjv" path="res://Assets/Sprites/david/walk/DAVID (WALK) - frente.png" id="2_65o36"]
+[ext_resource type="Texture2D" uid="uid://kyef0t0nk53p" path="res://Assets/Sprites/david/pegandocafe.png" id="2_w57lq"]
 [ext_resource type="Texture2D" uid="uid://dsltqy7y1y5vk" path="res://Assets/Sprites/david/walk/DAVID (WALK) - direita.png" id="3_n04c0"]
 [ext_resource type="Texture2D" uid="uid://cikc833c87d8n" path="res://Assets/Sprites/david/walk/DAVID (IDLE) - frente.png" id="4_85qqg"]
 [ext_resource type="Texture2D" uid="uid://c48aiduny5t6g" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - frente.png" id="6_vt1md"]
+[ext_resource type="Texture2D" uid="uid://c1t335n6pxn0k" path="res://Assets/Sprites/david/pegandocafecolorido.png" id="7_6xjgf"]
 [ext_resource type="Texture2D" uid="uid://ck18pv2cjlrpe" path="res://Assets/Sprites/david/semana 3/idle/DAVI (IDLE) - frente.png" id="7_fui11"]
 [ext_resource type="Texture2D" uid="uid://6lylxxhgspd5" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - direita.png" id="8_t6id7"]
 [ext_resource type="Texture2D" uid="uid://bisf5rf6xp7kv" path="res://Assets/Sprites/david/semana 3/walk/DAVI (WALK) - costas.png" id="9_hlnye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2dbj"]
 size = Vector2(17, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr4nd"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ifmf"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiwsx"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4ww1"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwafm"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5852"]
+atlas = ExtResource("2_w57lq")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xemwo"]
 atlas = ExtResource("2_65o36")
@@ -180,6 +206,26 @@ region = Rect2(320, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_o67ck"]
 atlas = ExtResource("4_85qqg")
 region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etbqd"]
+atlas = ExtResource("7_6xjgf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q00qu"]
+atlas = ExtResource("7_6xjgf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8pmj"]
+atlas = ExtResource("7_6xjgf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yx3x"]
+atlas = ExtResource("7_6xjgf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vms1a"]
+atlas = ExtResource("7_6xjgf")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_li6t7"]
 atlas = ExtResource("6_vt1md")
@@ -377,6 +423,29 @@ region = Rect2(352, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_sr4nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ifmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiwsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4ww1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwafm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5852")
+}],
+"loop": true,
+"name": &"bwcafe",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_xemwo")
 }, {
 "duration": 1.0,
@@ -520,6 +589,26 @@ animations = [{
 "loop": true,
 "name": &"bwup",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etbqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q00qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8pmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yx3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vms1a")
+}],
+"loop": true,
+"name": &"rgbcafe",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -698,7 +787,5 @@ shape = SubResource("RectangleShape2D_r2dbj")
 [node name="sprite" type="AnimatedSprite2D" parent="." groups=["player"]]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_sxyg3")
-animation = &"rgbside"
+animation = &"rgbcafe"
 autoplay = "bwidle"
-frame = 3
-frame_progress = 0.976209

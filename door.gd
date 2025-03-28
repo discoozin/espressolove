@@ -26,5 +26,4 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://Assets/Scenes/cafecenacolorido.tscn")
 		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)
 		print("foi")
-	if Input.is_action_just_pressed("trocarmundo"):
-		get_tree().change_scene_to_file("res://Assets/Scenes/mundocolorido.tscn")
+	

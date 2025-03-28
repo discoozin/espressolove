@@ -4,6 +4,7 @@ extends CharacterBody2D
 var character_direction: Vector2
 var parado
 var ordem
+@onready var sprite: AnimatedSprite2D = %sprite
 
 func _physics_process(delta):	
 	parado = Dialogic.VAR.get("podeandar")
@@ -37,3 +38,6 @@ func _ready() -> void:
 	
 func _on_spawn(position:Vector2, direction:String):
 	global_position=position
+	$sprite.play("rgbcafe")
+	await get_tree().create_timer(0.2).timeout
+	$sprite.flip_h=true

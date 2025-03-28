@@ -349,6 +349,9 @@ destination_level_tag = "cafecena"
 destination_door_tag = "W"
 spawn_direction = "left"
 
+[node name="spawn" parent="Areacafe/DoorCafeteria" index="1"]
+position = Vector2(-1, 0)
+
 [connection signal="body_entered" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_entered"]
 [connection signal="body_exited" from="levels/salaestoque" to="levels/salaestoque" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
