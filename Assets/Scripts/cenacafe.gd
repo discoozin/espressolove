@@ -5,6 +5,7 @@ extends Node2D
 @onready var texture_rect_1: TextureRect = $TextureRect1
 
 var qualcafe
+var pronto
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,10 +15,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	qualcafe = Dialogic.VAR.get("qualcafe")
+	pronto = Dialogic.VAR.get("prontocaf")
 	
-	if Input.is_action_just_pressed("interact"):
-		NavigationManager.go_to_level("main", "Cafeteria" ) #resolvernonavigator
-		Dialogic.VAR.set("animcafe", 0)
+	if pronto == 1:
+		if Input.is_action_just_pressed("interact"):
+			NavigationManager.go_to_level("main", "Cafeteria" ) #resolvernonavigator
+			Dialogic.VAR.set("animcafe", 0)
 	if qualcafe == 1:
 		$Label.text = "O cliente quer um\n Expresso"
 	if qualcafe == 2:

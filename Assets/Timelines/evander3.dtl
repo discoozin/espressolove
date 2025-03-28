@@ -1,4 +1,5 @@
 if {ordempedido} == 7:
+	set {podeandar} = true
 	join Evander left
 	Evander: Agora vou te deixar trabalhando, qualquer coisa pode falar comigo ou com a Patrícia.
 	join David right
@@ -9,3 +10,4 @@ if {ordempedido} == 7:
 	set {ordempedido} = 8
 	set {mudatextger} = 3
 	set {exclamacao} = 8
+	set {podeandar} = false

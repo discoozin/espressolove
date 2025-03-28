@@ -1,9 +1,12 @@
 if {ordempedido} <= 11:
 	join patricia-colorido (neutro) left
+	set {podeandar} = true
 	Patrícia: Oi David, precisa de alguma coisa?
 	- Por enquanto não.
 		Patrícia: Okayy, quando precisares de algo, só me chamar.
+	set {podeandar} = false
 if {ordempedido} == 12:
+	set {podeandar} = true
 	join patricia-colorido (neutro_falando) left
 	Patrícia: Você se saiu bem nas últimas semanas para um novato.
 	update patricia-colorido (neutro)
@@ -32,3 +35,4 @@ if {ordempedido} == 12:
 	leave Patrícia
 	set {ordempedido} = 13
 	set {exclamacao} = 13
+	set {podeandar} = false

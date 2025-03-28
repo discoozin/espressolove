@@ -6,3 +6,4 @@ var bernardo = false
 var velha = false
 var policia = false
 var mulher = false
+var abre = 1

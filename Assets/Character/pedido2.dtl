@@ -1,7 +1,10 @@
 if {fezpedido?} == 0:
+	set {podeandar} = true
 	Senhorinha: Obrigada, mas por enquanto não vou pedir. Estou escolhendo ainda.
+	set {podeandar} = false
 
 if {ordempedido} == 6:
+	set {podeandar} = true
 	Senhorinha: Boa tarde, jovem. Vocês vendem chá?
 	join David right
 	David: Bom dia senhora, seja bem-vinda ao Esmeralda Café. Não vendemos chá infelizmente.
@@ -13,9 +16,11 @@ if {ordempedido} == 6:
 	David: Certinho, senhora, só um segundo e seu café com leite já vai estar saindo.
 	set {qualcafe} = 3
 	set {exclamacao} = 3
+	set {podeandar} = false
 	
 	# #ACERTOU
 if {cafeleite} == 1:
+	set {podeandar} = true
 	Senhorinha: Obrigada meu bem, esse sabor me recorda dos tempos antigos. Tenha um bom dia.
 	
 	# #ERROU
@@ -23,7 +28,9 @@ if {cafeleite} == 1:
 	set {ordempedido} = 7
 	set {cont_pedido} = 0
 	set {exclamacao} = 7
+	set {podeandar} = false
 if {expresso} == 1:
+	set {podeandar} = true
 	if {cont_pedido} >= 2:
 		Senhorinha: Acho melhor eu procurar um lugar que vende chá mesmo.
 		set {expresso} = 0
@@ -33,9 +40,11 @@ if {expresso} == 1:
 		set {expresso} = 0
 		set {cont_pedido} += 1
 		set {exclamacao} = 3
+	set {podeandar} = false
 
 
 if {cappucino} == 1:
+	set {podeandar} = true
 	if {cont_pedido} >= 2:
 		Senhorinha: Acho melhor eu procurar um lugar que vende chá mesmo.
 		set {cappucino} = 0
@@ -45,3 +54,4 @@ if {cappucino} == 1:
 		set {cappucino} = 0
 		set {cont_pedido} += 1
 		set {exclamacao} = 3
+	set {podeandar} = false

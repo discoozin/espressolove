@@ -5,6 +5,7 @@ extends Node2D
 @onready var texture_rect_1: TextureRect = $TextureRect1
 
 var qualcafe 
+var pronto
 
 func _on_timer_timeout() -> void:
 	gotascafe.emitting=false
@@ -14,9 +15,11 @@ func _on_timer_timeout() -> void:
 
 func _process(delta: float) -> void:
 	qualcafe = Dialogic.VAR.get("qualcafe")
+	pronto = Dialogic.VAR.get("prontocaf")
 	
-	if Input.is_action_just_pressed("interact"):
-		NavigationManager.go_to_level("mundocolorido", "Cafeteria" )
+	if pronto == 1:
+		if Input.is_action_just_pressed("interact"):
+			NavigationManager.go_to_level("mundocolorido", "Cafeteria" )
 
 	if qualcafe == 1:
 		$Label.text = "O cliente quer um\n Expresso"

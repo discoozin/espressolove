@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=4 uid="uid://cagxpwsmrojgt"]
+[gd_scene load_steps=127 format=4 uid="uid://cagxpwsmrojgt"]
 
 [ext_resource type="Script" path="res://Assets/Scenes/mundocolorido.gd" id="1_85l0p"]
 [ext_resource type="Texture2D" uid="uid://bc8xnyxq6gh2x" path="res://Assets/Tilemap/terreno-colorido.png" id="1_dchi0"]
@@ -908,6 +908,9 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7njbh"]
+size = Vector2(20, 14)
+
 [node name="mundocolorido" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_85l0p")
@@ -1003,8 +1006,17 @@ sprite_frames = SubResource("SpriteFrames_vxw6w")
 autoplay = "default"
 frame_progress = 0.712374
 
-[node name="fade_transition" parent="." instance=ExtResource("2_q5vvi")]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(79, 137)
+shape = SubResource("RectangleShape2D_7njbh")
+debug_color = Color(1, 1, 1, 0.42)
+
+[node name="fade_transition" parent="Area2D" instance=ExtResource("2_q5vvi")]
 visible = false
-position = Vector2(-418, -278)
+position = Vector2(-472, -216)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 
 [editable path="Areacafe/DoorCafeteria"]

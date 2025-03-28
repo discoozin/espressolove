@@ -1,4 +1,5 @@
 if {ordempedido} == 10:
+	set {podeandar} = true
 	join Evander-Colorido left
 	Evander: Boa tarde, David. Você chegou mais cedo hoje, não?
 	join David-Colorido (neutro) right
@@ -10,3 +11,4 @@ if {ordempedido} == 10:
 	set {ordempedido} = 11
 	set {exclamacao} = 11
 	set {mudatextger} = 4
+	set {podeandar} = false

@@ -34,12 +34,14 @@ directories/dch_directory={
 "Patricia-pb": "res://Assets/Character/Patricia-pb.dch",
 "Patrícia": "res://Assets/Character/Patrícia.dch",
 "Senhorinha": "res://Assets/Character/Senhorinha.dch",
+"narrador": "res://Assets/Timelines/narrador.dch",
 "patricia-colorido": "res://Assets/Character/patricia-colorido.dch",
 "patricia2": "res://Assets/Character/patricia2.dch",
 "policial": "res://Assets/Character/policial.dch",
 "trabalhadora": "res://Assets/Character/trabalhadora.dch"
 }
 directories/dtl_directory={
+"contexto": "res://Assets/Timelines/contexto.dtl",
 "evander2": "res://Assets/Timelines/evander2.dtl",
 "evander3": "res://Assets/Timelines/evander3.dtl",
 "evander4": "res://Assets/Timelines/evander4.dtl",
@@ -67,6 +69,7 @@ variables={
 "mudatextger": 0.0,
 "ordempedido": 0.0,
 "podeandar": false,
+"prontocaf": 0.0,
 "qualcafe": 0.0,
 "tutorial": 0.0
 }

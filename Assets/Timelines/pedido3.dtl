@@ -1,4 +1,5 @@
 if {ordempedido} == 11:
+	set {podeandar} = true
 	join David-Colorido (neutro) right
 	- Bom dia, o que deseja pedir?
 		trabalhadora: Bom dia. Estou atrasada para o trabalho, se puder apressar...
@@ -15,9 +16,12 @@ if {ordempedido} == 11:
 	leave David-Colorido
 	set {qualcafe} = 1
 	set {exclamacao} = 3
+	set {podeandar} = false
 if {expresso} == 1:
+	set {podeandar} = true
 	trabalhadora: Isso vai me deixar bem acordada pro resto do dia, obrigada.
 	set {expresso} = 0
 	set {cont_pedido} = 0
 	set {ordempedido} = 12
 	set {exclamacao} = 12
+	set {podeandar} = false

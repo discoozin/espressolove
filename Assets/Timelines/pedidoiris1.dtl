@@ -1,32 +1,40 @@
 if {fezpedido?} == 1:
 	Iris: Olá, ainda não vou fazer meu pedido, estou terminando um trabalho.
 if {ordempedido} == 8:
+	set {podeandar} = true
 	join David right
-	David: Bom di-
-	David: !!!
-	David: (É a mesma garota que vi quando vim fazer a entrevista!)
+	David (david-neutro): Bom di-
+	David (assustado): !!!
+	David (assustado): (É a mesma garota que vi quando vim fazer a entrevista!)
 	join Iris left
-	Iris: ???
-	David: Bom dia, como posso ajudá-la?
-	Iris: Vou querer o de sempre, por gentileza.
-	David: desculpa moça, sou novo aqui.
+	Iris (neutro): ???
+	David (nervoso_fala): Bom dia, como posso ajudá-la?
+	update David (nervoso)
+	Iris (neutro_falando): Vou querer o de sempre, por gentileza.
+	update Iris (neutro)
+	David (nervoso_fala): desculpa moça, sou novo aqui.
+	update David (nervoso)
 	leave Iris
 	join Patricia-pb left
 	Patrícia: Ela sempre pede um Cappuccino Gelado Duplo.
 	leave Patrícia
-	join Iris left
-	David: Ah, só um minuto moça.
+	David (nervoso_fala): Ah, só um minuto moça.
 	leave --All--
-	set {qualcafe} = 1
+	set {qualcafe} = 2
 	set {exclamacao} = 3
+	set {podeandar} = false
 if {cappucino} == 1:
+	set {podeandar} = true
 	join David right
-	David: Aqui está o seu pedido.
-	David: Eu sou novo aqui, então me desculpe por qualquer coisa.
+	David (neutro_fala): Aqui está o seu pedido.
+	David (david-neutro): Eu sou novo aqui, então me desculpe por qualquer coisa.
+	update David (david-neutro)
 	join Iris left
-	Iris: Eu que devo pedir desculpa! Eu não tinha reparado que tinha um funcionário novo aqui.
-	Iris: Muito obrigada pelo café, até mais.
-	David: Volte sempre.
+	Iris (nervosa_falando): Eu que devo pedir desculpa! Eu não tinha reparado que tinha um funcionário novo aqui.
+	Iris (alegre_falando): Muito obrigada pelo café, até mais.
+	update Iris (alegre)
+	David (alegre_fala): Volte sempre.
 	leave --All--
 	set {ordempedido} = 9
 	set {exclamacao} = 9
+	set {podeandar} = false

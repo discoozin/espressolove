@@ -17,9 +17,63 @@
 "nicknames": [""],
 "offset": Vector2(150, 0),
 "portraits": {
+"alegre": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi alegre.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"alegre_fala": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi alegre fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"assustado": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi assustado.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "david-neutro": {
 "export_overrides": {
 "image": "\"res://Assets/Sprites/david/david pb.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervoso": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi neutro fala.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"nervoso_fala": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi nervoso.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"neutro_fala": {
+"export_overrides": {
+"image": "\"res://Assets/Sprites/david/talksprite/preto/davi neutro fala.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

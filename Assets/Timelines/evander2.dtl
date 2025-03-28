@@ -1,5 +1,6 @@
 # ORDEM 5
 if {ordempedido} == 5:
+	set {podeandar} = true
 	join Evander left
 	join David right
 	Evander: Ótimo trabalho, pelo visto o cliente ficou bem satisfeito com o café que você preparou.
@@ -19,3 +20,4 @@ if {ordempedido} == 5:
 	set {fezpedido?} = 1
 	set {mudatextger} = 2
 	set {exclamacao} = 6
+	set {podeandar} = false

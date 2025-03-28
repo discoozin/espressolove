@@ -6,7 +6,7 @@ extends CharacterBody2D
 #não precisa de explicação, é só a variavel pra ver se da pra interagir ou não BURRO BURRO BURRO
 var interativo = false
 var ordem = 0 #Dialogic.VAR.get("ordempedidos")
-var anim = 0
+var anim = 2
 var excl = 0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -15,8 +15,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	interativo = false
+	
 	if ordem == 7:
-		anim = 1
+		anim = 0
 
 func _process(delta: float) -> void:
 	ordem = Dialogic.VAR.get("ordempedidos")
@@ -25,8 +26,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and interativo == true:
 		Dialogic.start(dialogo)
 	
+	
 	exclamacao()
-	animsaida()
 
 func exclamacao():
 	excl = Dialogic.VAR.get("exclamacao")
@@ -37,8 +38,8 @@ func exclamacao():
 		$exclamacao3.visible = false
 
 func animsaida():
-	if ordem == 7 and anim == 1:
+	if ordem == 7 and anim == 0:
 		$"../../AnimationPlayer".play("cliente2_saindo")
-		anim = 0
+		anim = 1
 		await $"../../AnimationPlayer".animation_finished
 		Global.velha = true

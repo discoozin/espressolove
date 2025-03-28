@@ -1,4 +1,5 @@
 if {ordempedido} == 13:
+	set {podeandar} = true
 	join David-Colorido right
 	David: Bom dia! Alguma bebida especial no menu de hoje?
 	- Bom dia! Como está sendo seu dia? Eu recomendo o nosso café favorito por aqui, o Cappucino
@@ -9,8 +10,38 @@ if {ordempedido} == 13:
 	David: Claro! Não vai demorar muito.
 	set {qualcafe} = 2
 	set {exclamacao} = 3
+	set {podeandar} = false
 	leave --All--
 if {cappucino} == 1:
+	set {podeandar} = true
 	policial: Valeu, eu não funciono sem o meu café diário. Continue com o bom trabalho!
 	set {ordempedido} = 14
 	set {exclamacao} = 14
+	set {cont_pedido} = 0
+	set {podeandar} = false
+if {expresso} == 1:
+	set {podeandar} = true
+	if {cont_pedido} >= 2:
+		policial: A cafeteria da delegacia tem um atendimento muito melhor que esse.
+		set {expresso} = 0
+		set {exclamacao} = 3
+		set {cont_pedido} = 0
+	elif {cont_pedido} <= 1:
+		policial: Oxi, eu não pedi isso. Eu paguei por um Capuccino
+		set {expresso} = 0
+		set {cont_pedido} += 1
+		set {exclamacao} = 3
+	set {podeandar} = false
+if {cafeleite} == 1:
+	set {podeandar} = true
+	if {cont_pedido} >= 2:
+		policial: A cafeteria da delegacia tem um atendimento muito melhor que esse.
+		set {cafeleite} = 0
+		set {exclamacao} = 3
+		set {cont_pedido} = 0
+	elif {cont_pedido} <= 1:
+		policial: Oxi, eu não pedi isso. Eu paguei por um Capuccino
+		set {cafeleite} = 0
+		set {cont_pedido} += 1
+		set {exclamacao} = 3
+	set {podeandar} = false

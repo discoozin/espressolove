@@ -1,12 +1,16 @@
 extends Node2D
 
 var excl
-var ordem 
+var ordem = 0
 
 func _ready() -> void:
 	if NavigationManager.spawn_door_tag!=null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
-
+	
+	if Global.abre == 1:
+		Dialogic.start("contexto")
+		Global.abre = 0
+		
 func _on_level_spawn(destination_tag:String):
 	var door_path="Areacafe/Door" + destination_tag
 	var door = get_node(door_path) as Door
@@ -20,12 +24,11 @@ func _process(delta: float) -> void:
 		$exclamacao123.visible = true
 	else:
 		$exclamacao123.visible = false
+	
+	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and excl == 100:
+		print("oi")
+		get_tree().change_scene_to_file("res://Assets/Scenes/FINAL.tscn")
 
-	if ordem == 58:
-		$fade_transition.show()
-		$fade_transition/AnimationPlayer.play("fadein")
-		$fade_transition/fadetimer.start(1.0)
-		
-func _on_fadetimer_timeout():
-	get_tree().change_scene_to_file("res://Assets/Scenes/FINAL.tscn")
 	

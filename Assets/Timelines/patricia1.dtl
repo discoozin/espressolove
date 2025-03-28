@@ -1,13 +1,18 @@
 if {ordempedido} <= 8:
+	set {podeandar} = true
 	if {ordempedido} >= 6:
 		join Patricia-pb left
 		Patrícia: Oi David, precisa de alguma coisa?
 		- Por enquanto não.
 			Patrícia: Okayy, quando precisares de algo, só me chamar.
+	set {podeandar} = false
 elif {ordempedido} <= 6:
+	set {podeandar} = true
 	join Patricia-pb left
 	Patrícia: Estou ocupada agora, fale com o gerente se precisar de algo
+	set {podeandar} = false
 if {ordempedido} == 9:
+	set {podeandar} = true
 	join David right
 	David: Quem é aquela garota? E por que vocês fizeram o pedido dela, sendo que não tem no cardápio?
 	join Patricia-pb left
@@ -20,3 +25,4 @@ if {ordempedido} == 9:
 	leave --All--
 	set {ordempedido} = 10
 	set {exclamacao} = 10
+	set {podeandar} = false

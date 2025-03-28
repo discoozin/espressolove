@@ -5,16 +5,19 @@
 	set {animcafe} = 1
 	set {cappucino} = 0
 	set {cafeleite} = 0
+	set {prontocaf} = 1
 - Capuccino
 	set {cappucino} = 1
 	set {animcafe} = 1
 	set {expresso} = 0
 	set {cafeleite} = 0
+	set {prontocaf} = 1
 - Café com leite
 	set {cafeleite} = 1
 	set {animcafe} = 1
 	set {expresso} = 0
 	set {cappucino} = 0
+	set {prontocaf} = 1
 if {ordempedido} == 3:
 	set {exclamacao} = 4
 	set {ordempedido} = 100
@@ -32,4 +35,4 @@ if {ordempedido} == 13:
 	set {ordempedido} = 100
 if {ordempedido} == 14:
 	set {exclamacao} = 14
-	set {ordempedido} = 100
+	set {ordempedido} = 16
